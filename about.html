@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Hisham Unniyankal</title>
+  <meta name="description" content="About Hisham Unniyankal: PhD at University of Genova, researcher and software engineer, topics and background." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html" class="site-nav__brand">Hisham <span>Unniyankal</span></a>
+    <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
+      <span class="visually-hidden">Menu</span>
+      <span class="site-nav__toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <ul class="site-nav__links" id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="engineering.html">Engineering</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="layout">
+    <div class="page-grid">
+      <aside class="page-toc" aria-label="Site navigation">
+        <p class="page-toc__label">On this site</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="engineering.html">Engineering</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </aside>
+
+      <div class="page-main">
+        <main id="main-content">
+          <header class="page-header reveal">
+            <h1>About</h1>
+            <p class="page-header__lead">Research and engineering in one trajectory: formal methods meet production systems.</p>
+          </header>
+
+          <section class="section-block reveal" aria-labelledby="about-body-heading">
+            <div class="section-head">
+              <h2 id="about-body-heading">Biography</h2>
+              <span class="section-head__meta">Research × engineering</span>
+            </div>
+            <div class="about-grid">
+              <div class="about-copy">
+                <p>
+                  I work at the boundary between <strong>rigorous methods</strong> and <strong>shipping software</strong>.
+                  As a doctoral researcher at the <a href="https://unige.it/en" target="_blank" rel="noopener">University of Genova</a>,
+                  I study runtime verification and industrial automation—especially programmable logic controllers (PLCs) and safe control software—
+                  in collaboration with industry partners.
+                </p>
+                <p>
+                  As an engineer, I have designed and operated <strong>large-scale data pipelines</strong> (streaming analytics, rule engines, storage),
+                  built <strong>end-to-end web products</strong> used by thousands of users, and contributed across the stack from databases and services to UI integration.
+                  I care about correctness and observability in both research prototypes and production systems.
+                </p>
+                <p>
+                  I completed visiting doctoral activity at the <a href="https://www.um.edu.mt/" target="_blank" rel="noopener">University of Malta</a>
+                  (December 2025 – February 2026). I use modern AI-assisted tooling where it accelerates research and implementation—without substituting for clear specifications and tests.
+                </p>
+              </div>
+              <aside class="about-aside">
+                <h3>Snapshot</h3>
+                <ul>
+                  <li><strong>Roles</strong> PhD researcher; software engineer (industry &amp; freelance)</li>
+                  <li><strong>Location</strong> Genova, Italy</li>
+                  <li><strong>Languages</strong> English, Malayalam, Tamil, Italian (learning)</li>
+                </ul>
+              </aside>
+            </div>
+            <div class="tag-cloud" aria-label="Topics">
+              <span class="tag">Runtime verification</span>
+              <span class="tag tag--vio">Formal methods</span>
+              <span class="tag">PLCs &amp; automation</span>
+              <span class="tag tag--vio">Streaming &amp; big data</span>
+              <span class="tag">Backends &amp; APIs</span>
+              <span class="tag tag--vio">ML &amp; AI tooling</span>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>
+      &copy; <span id="year">2026</span> Hisham Unniyankal — HTML, CSS &amp; vanilla JS —
+      <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+    </p>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -3,277 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hisham Unniyankal – PhD Researcher, University of Genova</title>
-  <meta name="description" content="Hisham Unniyankal — doctoral researcher in computer science at the University of Genova. Runtime verification, formal methods, and industrial automation." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>" />
+  <title>Hisham Unniyankal — Researcher &amp; Software Engineer</title>
+  <meta name="description" content="Hisham Unniyankal — PhD researcher (runtime verification, PLCs) and software engineer. University of Genova." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <nav aria-label="Primary navigation">
-    <span class="nav-brand">Hisham Unniyankal</span>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#teaching">Teaching</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="index.html" class="site-nav__brand">Hisham <span>Unniyankal</span></a>
+    <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
+      <span class="visually-hidden">Menu</span>
+      <span class="site-nav__toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <ul class="site-nav__links" id="nav-menu">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="engineering.html">Engineering</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <header class="hero">
-    <div class="hero-inner">
-      <div class="hero-avatar" aria-hidden="true">🎓</div>
-      <div class="hero-text">
-        <h1>Hisham Unniyankal</h1>
-        <p class="subtitle">Doctoral Researcher · Computer Science</p>
-        <p class="institution">University of Genova · Genova, Italy</p>
-        <div class="hero-links">
-          <a href="mailto:uaj.hisham@gmail.com">✉ Email</a>
-          <a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">📖 Google Scholar</a>
-          <a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">🆔 ORCID</a>
-          <a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">💻 GitHub</a>
-          <a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">🔗 LinkedIn</a>
-          <a href="https://www.researchgate.net/profile/Hisham-Unniyankal?ev=hdr_xprf" target="_blank" rel="noopener">📚 ResearchGate</a>
-          <a href="cv.pdf" target="_blank" rel="noopener">📄 CV</a>
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__gridlines" aria-hidden="true"></div>
+    <div class="layout hero__grid">
+      <div class="hero__intro">
+        <p class="hero__badge hero-animate stagger-1"><span class="hero__badge-dot" aria-hidden="true"></span> Open to collaboration</p>
+        <h1 class="hero-animate stagger-2">Hisham Unniyankal</h1>
+        <p class="hero__roles hero-animate stagger-3">
+          <strong>Researcher</strong> in dependable automation &amp; formal methods · <strong>Engineer</strong> in data systems &amp; full-stack products
+        </p>
+        <p class="hero__institution hero-animate stagger-4">
+          PhD candidate, Computer Science — University of Genova · Genova, Italy
+        </p>
+        <div class="hero__actions hero-animate stagger-5">
+          <a class="hero__cta--primary" href="mailto:uaj.hisham@gmail.com">Email</a>
+          <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
+          <a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+          <a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
+      <aside class="hero__panel hero-animate-panel" aria-label="At a glance">
+        <p class="hero__panel-title">At a glance</p>
+        <dl>
+          <dt>Research focus</dt>
+          <dd>Runtime verification · PLCs · Safe industrial control</dd>
+          <dt>Engineering focus</dt>
+          <dd>Streaming data · Backends · Developer tooling</dd>
+          <dt>Profiles</dt>
+          <dd>
+            <a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a>
+            ·
+            <a href="https://www.researchgate.net/profile/Hisham-Unniyankal?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
+          </dd>
+        </dl>
+      </aside>
     </div>
   </header>
 
-  <main>
+  <div class="layout">
+    <div class="page-grid">
+      <aside class="page-toc" aria-label="Site navigation">
+        <p class="page-toc__label">On this site</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="engineering.html">Engineering</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </aside>
 
-    <section id="about" aria-labelledby="about-heading">
-      <h2 class="section-title" id="about-heading">About</h2>
-      <div class="about-text">
-        <p>
-          I am a PhD student in Computer Science at the <a href="https://unige.it/en" target="_blank" rel="noopener">University of Genova</a>,
-          working on runtime verification and industrial automation with a focus on programmable logic controllers (PLCs) and safe control software.
-          My background combines academic research with software engineering: before the doctorate I worked on large-scale data and security systems
-          (Apache Spark, Kafka, and related stacks) and delivered full-stack products in industry and freelance settings.
-        </p>
-        <p>
-          I am interested in formal methods, dependable systems, and how rigorous specification and monitoring can improve safety and reliability
-          in real plants and products. I also use modern AI-assisted tooling to accelerate research and implementation workflows.
-        </p>
-        <p>
-          I completed visiting doctoral activity at the <a href="https://www.um.edu.mt/" target="_blank" rel="noopener">University of Malta</a>
-          (December 2025 – February 2026). Outside work I enjoy building useful software, open-source tooling, and continuous learning.
-        </p>
+      <div class="page-main">
+        <main id="main-content">
+          <section class="section-block reveal" aria-labelledby="welcome-heading">
+            <div class="section-head">
+              <h2 id="welcome-heading">Welcome</h2>
+              <span class="section-head__meta">PhD · software · systems</span>
+            </div>
+            <div class="home-intro">
+              <p>
+                This site is split into separate pages so each area is easy to edit and version independently—research narrative, engineering track record,
+                bibliography, teaching, and contact. Use the grid below or the sidebar to navigate.
+              </p>
+            </div>
+            <div class="home-nav-grid">
+              <a href="about.html" class="home-tile">
+                <h3>About</h3>
+                <p>Background, how I combine rigorous methods with shipping software, and a snapshot of roles and languages.</p>
+              </a>
+              <a href="research.html" class="home-tile">
+                <h3>Research</h3>
+                <p>PhD focus: runtime verification for PLCs, specifications, RMLGym, and how I build evidence.</p>
+              </a>
+              <a href="engineering.html" class="home-tile">
+                <h3>Engineering</h3>
+                <p>Industry and product work: streaming analytics, full-stack delivery, stacks, and how I approach builds.</p>
+              </a>
+              <a href="publications.html" class="home-tile">
+                <h3>Publications</h3>
+                <p>Papers and workshops, with links to DOI, PDF, Scholar, and ORCID.</p>
+              </a>
+              <a href="teaching.html" class="home-tile">
+                <h3>Teaching</h3>
+                <p>Teaching support roles and courses.</p>
+              </a>
+              <a href="education.html" class="home-tile">
+                <h3>Education</h3>
+                <p>Degrees and programmes from PhD through BCA.</p>
+              </a>
+              <a href="contact.html" class="home-tile">
+                <h3>Contact</h3>
+                <p>Affiliation, email, and professional profiles.</p>
+              </a>
+            </div>
+          </section>
+        </main>
       </div>
+    </div>
+  </div>
 
-      <div class="tags" aria-label="Research keywords">
-        <span class="tag">Runtime verification</span>
-        <span class="tag">Formal methods</span>
-        <span class="tag">Industrial automation &amp; PLCs</span>
-        <span class="tag">Software engineering</span>
-        <span class="tag">Machine learning &amp; AI</span>
-        <span class="tag">Big data &amp; streaming systems</span>
-      </div>
-    </section>
-
-    <section id="research" aria-labelledby="research-heading">
-      <h2 class="section-title" id="research-heading">Research</h2>
-      <p class="section-lead">
-        My doctoral work centers on making runtime verification practical for PLC-based systems: specifying expected behaviour,
-        monitoring execution, and connecting to industrial toolchains—together with experimentation and tooling such as transpilation from
-        Structured Text (ST) to C where it helps integration and analysis.
-      </p>
-
-      <div class="research-grid">
-        <div class="research-card">
-          <h3>Runtime verification for PLCs</h3>
-          <p>
-            Designing and evaluating an RV framework for programmable logic controllers, with attention to safe program organization units
-            and meaningful experimental validation in realistic settings.
-          </p>
-        </div>
-        <div class="research-card">
-          <h3>Specification languages &amp; tooling</h3>
-          <p>
-            Using C as a specification language where it fits existing workflows; building bridges such as an ST-to-C transpiler for
-            cross-platform compatibility and performance.
-          </p>
-        </div>
-        <div class="research-card">
-          <h3>Formal rewards &amp; reinforcement learning</h3>
-          <p>
-            RMLGym: a formal reward-machine-oriented angle on reinforcement learning—linking formal property-based structure with RL settings
-            (see publications below).
-          </p>
-        </div>
-        <div class="research-card">
-          <h3>From data pipelines to dependable software</h3>
-          <p>
-            Prior experience includes high-throughput streaming analytics and full-stack delivery; I care about correctness, observability,
-            and maintainability—not only in research prototypes but in production-grade systems.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications" aria-labelledby="pubs-heading">
-      <h2 class="section-title" id="pubs-heading">Publications</h2>
-      <p class="section-lead pub-disclaimer">
-        Below is my list of peer-reviewed and workshop papers to date. For the most up-to-date bibliographic record, see
-        <a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        and <a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a>.
-      </p>
-      <ul class="pub-list">
-
-        <li class="pub-item">
-          <p class="pub-title">
-            <a href="https://doi.org/10.1109/DSN-S65789.2025.00050" target="_blank" rel="noopener">
-              Runtime Verification of Program Organization Units in Safe Programmable Logic Controller Systems
-            </a>
-          </p>
-          <p class="pub-authors">
-            <strong>Hisham Unniyankal</strong>, Davide Ancona, Angelo Ferrando, Federico Parodi, Andrea Alessi, Federico Bottino
-          </p>
-          <p class="pub-venue">
-            IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), <span class="pub-year">2025</span>
-          </p>
-          <div class="pub-links">
-            <a class="pub-badge badge-doi" href="https://doi.org/10.1109/DSN-S65789.2025.00050" target="_blank" rel="noopener">DOI</a>
-          </div>
-        </li>
-
-        <li class="pub-item">
-          <p class="pub-title">
-            <a href="https://ceur-ws.org/Vol-3579/paper1.pdf" target="_blank" rel="noopener">
-              RMLGym: a Formal Reward Machine Framework for Reinforcement Learning
-            </a>
-          </p>
-          <p class="pub-authors">
-            <strong>Hisham Unniyankal</strong>, Francesco Belardinelli, Angelo Ferrando, Vadim Malvone
-          </p>
-          <p class="pub-venue">
-            CEUR Workshop Proceedings, Vol. 3579, <span class="pub-year">2024</span>
-          </p>
-          <div class="pub-links">
-            <a class="pub-badge badge-pdf" href="https://ceur-ws.org/Vol-3579/paper1.pdf" target="_blank" rel="noopener">PDF</a>
-          </div>
-        </li>
-
-      </ul>
-    </section>
-
-    <section id="teaching" aria-labelledby="teaching-heading">
-      <h2 class="section-title" id="teaching-heading">Teaching</h2>
-      <ul class="edu-list">
-        <li class="edu-item">
-          <div class="edu-icon" aria-hidden="true">📋</div>
-          <div class="edu-body">
-            <h3>Teaching support — Distributed Computing</h3>
-            <p class="degree">University of Genova</p>
-            <p class="years">November 2024 – February 2025 · Academic and technical assistance for graduate students</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <section id="education" aria-labelledby="edu-heading">
-      <h2 class="section-title" id="edu-heading">Education</h2>
-      <ul class="edu-list">
-
-        <li class="edu-item">
-          <div class="edu-icon" aria-hidden="true">🎓</div>
-          <div class="edu-body">
-            <h3>PhD in Computer Science</h3>
-            <p class="degree">University of Genova — Genova, Italy</p>
-            <p class="years">November 2023 – present · Industrial collaboration (e.g. COBO Group) and runtime verification for PLCs</p>
-          </div>
-        </li>
-
-        <li class="edu-item">
-          <div class="edu-icon" aria-hidden="true">🏛</div>
-          <div class="edu-body">
-            <h3>M.Sc. in Computer Science (Data Science &amp; AI)</h3>
-            <p class="degree">University of Genova — Genova, Italy</p>
-            <p class="years">September 2020 – October 2023 · Final grade: 102/110</p>
-          </div>
-        </li>
-
-        <li class="edu-item">
-          <div class="edu-icon" aria-hidden="true">📚</div>
-          <div class="edu-body">
-            <h3>Master of Computer Applications (MCA)</h3>
-            <p class="degree">Anna University — Coimbatore, India</p>
-            <p class="years">July 2014 – June 2016 · CGPA: 7.85/10</p>
-          </div>
-        </li>
-
-        <li class="edu-item">
-          <div class="edu-icon" aria-hidden="true">📖</div>
-          <div class="edu-body">
-            <h3>Bachelor of Computer Applications (BCA)</h3>
-            <p class="degree">University of Calicut — Malappuram, India</p>
-            <p class="years">June 2011 – April 2014 · CGPA: 2.60/4</p>
-          </div>
-        </li>
-
-      </ul>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 class="section-title" id="contact-heading">Contact</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Affiliation</h3>
-          <address>
-            Department of Computer Science<br />
-            University of Genova<br />
-            Via Dodecaneso, 35<br />
-            16146 Genova GE, Italy<br /><br />
-            <a href="mailto:uaj.hisham@gmail.com">uaj.hisham@gmail.com</a>
-          </address>
-        </div>
-        <div class="contact-socials">
-          <h3>Online profiles</h3>
-          <ul class="social-links">
-            <li>
-              <a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">📖</span> Google Scholar
-              </a>
-            </li>
-            <li>
-              <a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">🆔</span> ORCID
-              </a>
-            </li>
-            <li>
-              <a href="https://www.researchgate.net/profile/Hisham-Unniyankal?ev=hdr_xprf" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">📚</span> ResearchGate
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">💻</span> GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">🔗</span> LinkedIn
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
+  <footer class="site-footer">
     <p>
-      &copy; <span id="year">2026</span> Hisham Unniyankal &mdash; Built with HTML &amp; CSS ·
-      Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+      &copy; <span id="year">2026</span> Hisham Unniyankal — HTML, CSS &amp; vanilla JS —
+      <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
     </p>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

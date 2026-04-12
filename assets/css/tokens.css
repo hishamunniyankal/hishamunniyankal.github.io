@@ -1,0 +1,43 @@
+/* Design tokens — researcher + engineer: clarity, structure, technical accents */
+:root {
+  --color-bg: #f4f6f9;
+  --color-bg-elevated: #ffffff;
+  --color-bg-dark: #0c1222;
+  --color-bg-dark-mid: #121a2e;
+  --color-surface: #e8ecf3;
+  --color-border: #c5cdd8;
+  --color-border-subtle: #dfe6ee;
+
+  --color-text: #1a2332;
+  --color-text-muted: #5c6b7e;
+  --color-text-on-dark: #e8edf5;
+
+  --color-accent: #0d9488;
+  --color-accent-dim: rgba(13, 148, 136, 0.12);
+  --color-accent-2: #7c3aed;
+  --color-accent-2-dim: rgba(124, 58, 237, 0.1);
+
+  --color-link: #0b6ebc;
+  --color-link-hover: #094d82;
+
+  --font-sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Consolas", "Courier New", monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --shadow-sm: 0 1px 2px rgba(12, 18, 34, 0.06);
+  --shadow-md: 0 8px 24px rgba(12, 18, 34, 0.1);
+  --shadow-glow: 0 0 0 1px rgba(13, 148, 136, 0.25);
+
+  --space-section: clamp(3rem, 6vw, 5rem);
+  --layout-max: min(92vw, 1420px);
+  --layout-pad-x: clamp(1.25rem, 4vw, 3rem);
+  --sidebar-width: 200px;
+  --nav-h: 56px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 0.2s;
+  --dur-med: 0.45s;
+}
