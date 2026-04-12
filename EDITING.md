@@ -16,7 +16,7 @@ Plain GitHub Pages does **not** run server-side includes or templates. Each page
 
 | File | Purpose |
 |------|---------|
-| **`index.html`** | Landing: hero, welcome blurb, **tiles** linking to other pages. |
+| **`index.html`** | Landing: hero, **What I Do**, **Featured Work** cards, welcome blurb, **tiles** linking to other pages. |
 | **`about.html`** | Long-form about + tags. |
 | **`research.html`** | Research themes and cards. |
 | **`engineering.html`** | Industry/product engineering. |
