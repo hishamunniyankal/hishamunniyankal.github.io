@@ -214,7 +214,7 @@ a.site-nav__brand span {
 
 /* Section chrome — light card grouping on page canvas */
 .section-block {
-  padding: var(--space-section) 0;
+  padding: var(--space-section) var(--section-pad-inline);
   margin-bottom: 1rem;
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
@@ -247,7 +247,8 @@ a.site-nav__brand span {
   color: var(--color-text);
 }
 
-.section-head h2::after {
+.section-head h2::after,
+.how-i-build h2::after {
   content: "";
   display: block;
   width: 2.75rem;
@@ -255,6 +256,10 @@ a.site-nav__brand span {
   margin-top: 0.7rem;
   border-radius: 2px;
   background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+}
+
+.how-i-build h2::after {
+  margin-top: 0.65rem;
 }
 
 .section-head__meta {

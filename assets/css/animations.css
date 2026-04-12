@@ -50,6 +50,17 @@
   }
 }
 
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 12px var(--color-accent);
+  }
+  50% {
+    opacity: 0.75;
+    box-shadow: 0 0 20px var(--color-accent);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -62,5 +73,19 @@
     opacity: 1;
     transform: none;
     animation: none;
+  }
+
+  .hero__badge-dot {
+    animation: none;
+  }
+
+  .pub-badge:hover {
+    transform: none;
+  }
+
+  .featured-card:hover,
+  .pub-item:hover,
+  a.home-tile:hover {
+    transform: none;
   }
 }

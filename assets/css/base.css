@@ -112,6 +112,6 @@ a:focus-visible {
   color: var(--color-text);
   border: 2px solid var(--color-accent);
   border-radius: var(--radius-sm);
-  font-weight: 600;
+  font-weight: var(--font-weight-em);
   font-size: 0.9rem;
 }
