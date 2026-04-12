@@ -665,6 +665,74 @@
   color: var(--color-text);
 }
 
+/* Home: Impact Highlights — horizontal scannable strip */
+.impact-highlights {
+  padding: clamp(1.35rem, 3.5vw, 2rem) 0;
+  background: linear-gradient(165deg, #0f1729 0%, var(--color-bg-dark-mid) 45%, #0c1222 100%);
+  color: var(--color-text-on-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.impact-highlights__inner {
+  max-width: var(--layout-max);
+}
+
+.impact-highlights__label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(232, 237, 245, 0.5);
+  margin-bottom: 1rem;
+}
+
+.impact-highlights__row {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.impact-highlights__row li {
+  flex: 1 1 200px;
+  min-width: min(100%, 11rem);
+  padding: 0.75rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: #f1f5f9;
+  border-left: 3px solid var(--color-accent);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+@media (min-width: 700px) {
+  .impact-highlights__row li {
+    border-left-width: 0;
+    border-top: 3px solid var(--color-accent);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .impact-highlights__row li:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 699px) {
+  .impact-highlights__row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .impact-highlights__row li {
+    border-radius: var(--radius-sm);
+  }
+}
+
 /* Home: Featured Work */
 .featured-work {
   padding: clamp(2rem, 5vw, 3.25rem) 0;
