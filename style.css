@@ -192,6 +192,21 @@ section:last-child {
   display: inline-block;
 }
 
+.section-lead {
+  color: var(--text-light);
+  font-size: 0.98rem;
+  margin-bottom: 1rem;
+  max-width: 52rem;
+}
+
+.section-lead a {
+  font-weight: 500;
+}
+
+.pub-disclaimer {
+  margin-bottom: 1.25rem;
+}
+
 /* ===== About ===== */
 .about-text p {
   margin-bottom: 0.9rem;

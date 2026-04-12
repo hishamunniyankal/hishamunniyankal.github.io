@@ -3,204 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hisham Unniyankal – PhD Researcher</title>
-  <meta name="description" content="Personal website of Hisham Unniyankal, PhD researcher in Computer Science." />
+  <title>Hisham Unniyankal – PhD Researcher, University of Genova</title>
+  <meta name="description" content="Hisham Unniyankal — doctoral researcher in computer science at the University of Genova. Runtime verification, formal methods, and industrial automation." />
   <link rel="stylesheet" href="style.css" />
-  <!-- Favicon emoji fallback -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>" />
 </head>
 <body>
 
-  <!-- ===== Navigation ===== -->
   <nav aria-label="Primary navigation">
     <span class="nav-brand">Hisham Unniyankal</span>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- ===== Hero ===== -->
   <header class="hero">
     <div class="hero-inner">
       <div class="hero-avatar" aria-hidden="true">🎓</div>
       <div class="hero-text">
         <h1>Hisham Unniyankal</h1>
-        <p class="subtitle">PhD Researcher · Department of Computer Science</p>
-        <p class="institution">University · City, Country</p>
+        <p class="subtitle">Doctoral Researcher · Computer Science</p>
+        <p class="institution">University of Genova · Genova, Italy</p>
         <div class="hero-links">
-          <a href="mailto:hisham@university.edu">✉ Email</a>
-          <a href="https://scholar.google.com" target="_blank" rel="noopener">📖 Google Scholar</a>
+          <a href="mailto:uaj.hisham@gmail.com">✉ Email</a>
+          <a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">📖 Google Scholar</a>
+          <a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">🆔 ORCID</a>
           <a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">💻 GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener">🔗 LinkedIn</a>
-          <a href="cv.pdf" target="_blank">📄 CV</a>
+          <a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          <a href="https://www.researchgate.net/profile/Hisham-Unniyankal?ev=hdr_xprf" target="_blank" rel="noopener">📚 ResearchGate</a>
+          <a href="cv.pdf" target="_blank" rel="noopener">📄 CV</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ===== Main ===== -->
   <main>
 
-    <!-- About -->
     <section id="about" aria-labelledby="about-heading">
-      <h2 class="section-title" id="about-heading">About Me</h2>
+      <h2 class="section-title" id="about-heading">About</h2>
       <div class="about-text">
         <p>
-          I am a PhD student in the Department of Computer Science, where I am fortunate to be advised
-          by [Advisor Name]. My research sits at the intersection of machine learning, natural language
-          processing, and knowledge representation, with a focus on building AI systems that can reason
-          reliably over structured and unstructured data.
+          I am a PhD student in Computer Science at the <a href="https://unige.it/en" target="_blank" rel="noopener">University of Genova</a>,
+          working on runtime verification and industrial automation with a focus on programmable logic controllers (PLCs) and safe control software.
+          My background combines academic research with software engineering: before the doctorate I worked on large-scale data and security systems
+          (Apache Spark, Kafka, and related stacks) and delivered full-stack products in industry and freelance settings.
         </p>
         <p>
-          Prior to my PhD, I completed my Bachelor's and Master's degrees in Computer Science and spent
-          time working on applied NLP problems in industry. I am passionate about bridging the gap between
-          academic research and real-world impact.
+          I am interested in formal methods, dependable systems, and how rigorous specification and monitoring can improve safety and reliability
+          in real plants and products. I also use modern AI-assisted tooling to accelerate research and implementation workflows.
         </p>
         <p>
-          Outside the lab, I enjoy hiking, reading philosophy of mind, and experimenting with open-source
-          software.
+          I completed visiting doctoral activity at the <a href="https://www.um.edu.mt/" target="_blank" rel="noopener">University of Malta</a>
+          (December 2025 – February 2026). Outside work I enjoy building useful software, open-source tooling, and continuous learning.
         </p>
       </div>
 
       <div class="tags" aria-label="Research keywords">
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Natural Language Processing</span>
-        <span class="tag">Knowledge Graphs</span>
-        <span class="tag">Information Retrieval</span>
-        <span class="tag">Explainable AI</span>
-        <span class="tag">Large Language Models</span>
+        <span class="tag">Runtime verification</span>
+        <span class="tag">Formal methods</span>
+        <span class="tag">Industrial automation &amp; PLCs</span>
+        <span class="tag">Software engineering</span>
+        <span class="tag">Machine learning &amp; AI</span>
+        <span class="tag">Big data &amp; streaming systems</span>
       </div>
     </section>
 
-    <!-- Research -->
     <section id="research" aria-labelledby="research-heading">
       <h2 class="section-title" id="research-heading">Research</h2>
-      <p>
-        My work explores how machines can acquire, represent, and apply knowledge in a manner that is
-        interpretable and trustworthy. I am particularly interested in the following directions:
+      <p class="section-lead">
+        My doctoral work centers on making runtime verification practical for PLC-based systems: specifying expected behaviour,
+        monitoring execution, and connecting to industrial toolchains—together with experimentation and tooling such as transpilation from
+        Structured Text (ST) to C where it helps integration and analysis.
       </p>
 
       <div class="research-grid">
         <div class="research-card">
-          <h3>Knowledge-Augmented LLMs</h3>
+          <h3>Runtime verification for PLCs</h3>
           <p>
-            Designing retrieval-augmented generation pipelines that ground large language model outputs
-            in verified knowledge sources, reducing hallucinations.
+            Designing and evaluating an RV framework for programmable logic controllers, with attention to safe program organization units
+            and meaningful experimental validation in realistic settings.
           </p>
         </div>
         <div class="research-card">
-          <h3>Graph Reasoning</h3>
+          <h3>Specification languages &amp; tooling</h3>
           <p>
-            Developing neural-symbolic methods for multi-hop reasoning over heterogeneous knowledge
-            graphs, combining embedding-based and logic-based approaches.
+            Using C as a specification language where it fits existing workflows; building bridges such as an ST-to-C transpiler for
+            cross-platform compatibility and performance.
           </p>
         </div>
         <div class="research-card">
-          <h3>Explainability &amp; Trust</h3>
+          <h3>Formal rewards &amp; reinforcement learning</h3>
           <p>
-            Creating post-hoc and intrinsic explanation methods for NLP models, with applications in
-            high-stakes domains such as healthcare and legal text analysis.
+            RMLGym: a formal reward-machine-oriented angle on reinforcement learning—linking formal property-based structure with RL settings
+            (see publications below).
           </p>
         </div>
         <div class="research-card">
-          <h3>Low-Resource Learning</h3>
+          <h3>From data pipelines to dependable software</h3>
           <p>
-            Investigating few-shot and zero-shot transfer techniques for under-resourced languages,
-            enabling equitable access to language technology.
+            Prior experience includes high-throughput streaming analytics and full-stack delivery; I care about correctness, observability,
+            and maintainability—not only in research prototypes but in production-grade systems.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Publications -->
     <section id="publications" aria-labelledby="pubs-heading">
       <h2 class="section-title" id="pubs-heading">Publications</h2>
+      <p class="section-lead pub-disclaimer">
+        Below is my list of peer-reviewed and workshop papers to date. For the most up-to-date bibliographic record, see
+        <a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        and <a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a>.
+      </p>
       <ul class="pub-list">
 
         <li class="pub-item">
           <p class="pub-title">
-            <a href="#" target="_blank" rel="noopener">
-              Faithful Retrieval-Augmented Generation via Knowledge Graph Grounding
+            <a href="https://doi.org/10.1109/DSN-S65789.2025.00050" target="_blank" rel="noopener">
+              Runtime Verification of Program Organization Units in Safe Programmable Logic Controller Systems
             </a>
           </p>
           <p class="pub-authors">
-            <strong>Hisham Unniyankal</strong>, Author B, Author C
+            <strong>Hisham Unniyankal</strong>, Davide Ancona, Angelo Ferrando, Federico Parodi, Andrea Alessi, Federico Bottino
           </p>
           <p class="pub-venue">
-            Proceedings of the Annual Conference on Empirical Methods in Natural Language Processing (EMNLP),
-            <span class="pub-year">2025</span>
+            IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), <span class="pub-year">2025</span>
           </p>
           <div class="pub-links">
-            <a class="pub-badge badge-arxiv" href="#" target="_blank" rel="noopener">arXiv</a>
-            <a class="pub-badge badge-pdf" href="#" target="_blank" rel="noopener">PDF</a>
-            <a class="pub-badge badge-code" href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">Code</a>
+            <a class="pub-badge badge-doi" href="https://doi.org/10.1109/DSN-S65789.2025.00050" target="_blank" rel="noopener">DOI</a>
           </div>
         </li>
 
         <li class="pub-item">
           <p class="pub-title">
-            <a href="#" target="_blank" rel="noopener">
-              Multi-Hop Reasoning over Heterogeneous Knowledge Graphs with Sparse Attention
+            <a href="https://ceur-ws.org/Vol-3579/paper1.pdf" target="_blank" rel="noopener">
+              RMLGym: a Formal Reward Machine Framework for Reinforcement Learning
             </a>
           </p>
           <p class="pub-authors">
-            <strong>Hisham Unniyankal</strong>, Author D
+            <strong>Hisham Unniyankal</strong>, Francesco Belardinelli, Angelo Ferrando, Vadim Malvone
           </p>
           <p class="pub-venue">
-            Findings of the Association for Computational Linguistics (ACL Findings),
-            <span class="pub-year">2024</span>
+            CEUR Workshop Proceedings, Vol. 3579, <span class="pub-year">2024</span>
           </p>
           <div class="pub-links">
-            <a class="pub-badge badge-arxiv" href="#" target="_blank" rel="noopener">arXiv</a>
-            <a class="pub-badge badge-pdf" href="#" target="_blank" rel="noopener">PDF</a>
-          </div>
-        </li>
-
-        <li class="pub-item">
-          <p class="pub-title">
-            <a href="#" target="_blank" rel="noopener">
-              Towards Interpretable Text Classification via Concept Bottleneck Language Models
-            </a>
-          </p>
-          <p class="pub-authors">
-            Author E, <strong>Hisham Unniyankal</strong>, Author F, Author G
-          </p>
-          <p class="pub-venue">
-            Workshop on Trustworthy NLP at NAACL,
-            <span class="pub-year">2024</span>
-          </p>
-          <div class="pub-links">
-            <a class="pub-badge badge-pdf" href="#" target="_blank" rel="noopener">PDF</a>
-          </div>
-        </li>
-
-        <li class="pub-item">
-          <p class="pub-title">
-            <a href="#" target="_blank" rel="noopener">
-              Cross-Lingual Transfer for Low-Resource Named Entity Recognition Using Multilingual Transformers
-            </a>
-          </p>
-          <p class="pub-authors">
-            <strong>Hisham Unniyankal</strong>, Author H
-          </p>
-          <p class="pub-venue">
-            International Journal of Computational Linguistics,
-            <span class="pub-year">2023</span>
-          </p>
-          <div class="pub-links">
-            <a class="pub-badge badge-doi" href="#" target="_blank" rel="noopener">DOI</a>
-            <a class="pub-badge badge-arxiv" href="#" target="_blank" rel="noopener">arXiv</a>
+            <a class="pub-badge badge-pdf" href="https://ceur-ws.org/Vol-3579/paper1.pdf" target="_blank" rel="noopener">PDF</a>
           </div>
         </li>
 
       </ul>
     </section>
 
-    <!-- Education -->
+    <section id="teaching" aria-labelledby="teaching-heading">
+      <h2 class="section-title" id="teaching-heading">Teaching</h2>
+      <ul class="edu-list">
+        <li class="edu-item">
+          <div class="edu-icon" aria-hidden="true">📋</div>
+          <div class="edu-body">
+            <h3>Teaching support — Distributed Computing</h3>
+            <p class="degree">University of Genova</p>
+            <p class="years">November 2024 – February 2025 · Academic and technical assistance for graduate students</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
     <section id="education" aria-labelledby="edu-heading">
       <h2 class="section-title" id="edu-heading">Education</h2>
       <ul class="edu-list">
@@ -209,75 +181,70 @@
           <div class="edu-icon" aria-hidden="true">🎓</div>
           <div class="edu-body">
             <h3>PhD in Computer Science</h3>
-            <p class="degree">University Name &mdash; City, Country</p>
-            <p class="years">2022 – Present &nbsp;·&nbsp; Advisor: Prof. [Advisor Name]</p>
+            <p class="degree">University of Genova — Genova, Italy</p>
+            <p class="years">November 2023 – present · Industrial collaboration (e.g. COBO Group) and runtime verification for PLCs</p>
           </div>
         </li>
 
         <li class="edu-item">
           <div class="edu-icon" aria-hidden="true">🏛</div>
           <div class="edu-body">
-            <h3>M.Sc. in Computer Science</h3>
-            <p class="degree">University Name &mdash; City, Country</p>
-            <p class="years">2019 – 2021 &nbsp;·&nbsp; Thesis: &ldquo;Neural Methods for Relation Extraction&rdquo;</p>
+            <h3>M.Sc. in Computer Science (Data Science &amp; AI)</h3>
+            <p class="degree">University of Genova — Genova, Italy</p>
+            <p class="years">September 2020 – October 2023 · Final grade: 102/110</p>
           </div>
         </li>
 
         <li class="edu-item">
           <div class="edu-icon" aria-hidden="true">📚</div>
           <div class="edu-body">
-            <h3>B.Tech. in Computer Science &amp; Engineering</h3>
-            <p class="degree">University Name &mdash; City, Country</p>
-            <p class="years">2015 – 2019 &nbsp;·&nbsp; Graduated with Distinction</p>
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p class="degree">Anna University — Coimbatore, India</p>
+            <p class="years">July 2014 – June 2016 · CGPA: 7.85/10</p>
+          </div>
+        </li>
+
+        <li class="edu-item">
+          <div class="edu-icon" aria-hidden="true">📖</div>
+          <div class="edu-body">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p class="degree">University of Calicut — Malappuram, India</p>
+            <p class="years">June 2011 – April 2014 · CGPA: 2.60/4</p>
           </div>
         </li>
 
       </ul>
     </section>
 
-    <!-- Awards -->
-    <section id="awards" aria-labelledby="awards-heading">
-      <h2 class="section-title" id="awards-heading">Honors &amp; Awards</h2>
-      <ul class="award-list">
-        <li class="award-item">
-          <span class="award-year">2024</span>
-          <span>Best Paper Honorable Mention – Workshop on Trustworthy NLP @ NAACL 2024</span>
-        </li>
-        <li class="award-item">
-          <span class="award-year">2023</span>
-          <span>Graduate Research Fellowship – Department of Computer Science</span>
-        </li>
-        <li class="award-item">
-          <span class="award-year">2022</span>
-          <span>PhD Scholarship – [Funding Body / University]</span>
-        </li>
-        <li class="award-item">
-          <span class="award-year">2021</span>
-          <span>Outstanding Master's Thesis Award – Department of Computer Science</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
     <section id="contact" aria-labelledby="contact-heading">
       <h2 class="section-title" id="contact-heading">Contact</h2>
       <div class="contact-grid">
         <div class="contact-info">
-          <h3>Office</h3>
+          <h3>Affiliation</h3>
           <address>
-            Room XXX, Building Name<br />
             Department of Computer Science<br />
-            University Name<br />
-            City, Country<br /><br />
-            <a href="mailto:hisham@university.edu">hisham@university.edu</a>
+            University of Genova<br />
+            Via Dodecaneso, 35<br />
+            16146 Genova GE, Italy<br /><br />
+            <a href="mailto:uaj.hisham@gmail.com">uaj.hisham@gmail.com</a>
           </address>
         </div>
         <div class="contact-socials">
-          <h3>Find me online</h3>
+          <h3>Online profiles</h3>
           <ul class="social-links">
             <li>
-              <a href="https://scholar.google.com" target="_blank" rel="noopener">
+              <a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">
                 <span class="social-icon" aria-hidden="true">📖</span> Google Scholar
+              </a>
+            </li>
+            <li>
+              <a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">
+                <span class="social-icon" aria-hidden="true">🆔</span> ORCID
+              </a>
+            </li>
+            <li>
+              <a href="https://www.researchgate.net/profile/Hisham-Unniyankal?ev=hdr_xprf" target="_blank" rel="noopener">
+                <span class="social-icon" aria-hidden="true">📚</span> ResearchGate
               </a>
             </li>
             <li>
@@ -286,18 +253,8 @@
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com" target="_blank" rel="noopener">
+              <a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">
                 <span class="social-icon" aria-hidden="true">🔗</span> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">🐦</span> Twitter / X
-              </a>
-            </li>
-            <li>
-              <a href="https://orcid.org" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">🆔</span> ORCID
               </a>
             </li>
           </ul>
@@ -307,16 +264,14 @@
 
   </main>
 
-  <!-- ===== Footer ===== -->
   <footer>
     <p>
-      &copy; <span id="year">2025</span> Hisham Unniyankal &mdash; Built with HTML &amp; CSS ·
+      &copy; <span id="year">2026</span> Hisham Unniyankal &mdash; Built with HTML &amp; CSS ·
       Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
     </p>
   </footer>
 
   <script>
-    // Keep copyright year current
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
