@@ -16,7 +16,7 @@ Plain GitHub Pages does **not** run server-side includes or templates. Each page
 
 | File | Purpose |
 |------|---------|
-| **`index.html`** | Landing: hero, **What I Do**, **Impact Highlights** strip, **Featured Work** cards, welcome blurb, **tiles** linking to other pages. |
+| **`index.html`** | Landing: hero, **What I Do**, **Impact Highlights**, **How I Build Systems**, **Featured Work** cards, welcome blurb, **tiles** linking to other pages. |
 | **`about.html`** | Long-form about + tags. |
 | **`research.html`** | Research themes and cards. |
 | **`engineering.html`** | Industry/product engineering. |
@@ -25,6 +25,7 @@ Plain GitHub Pages does **not** run server-side includes or templates. Each page
 | **`education.html`** | Degrees. |
 | **`contact.html`** | Address, email, profiles. |
 | **`cv.pdf`** | CV (linked from hero on home). |
+| **`assets/images/projects/*.svg`** | Architecture / flow diagrams for Featured Work, Research cards, and Engineering (edit or replace SVGs; keep filenames or update `src` in HTML). |
 
 ## Shared assets (edit once, applies everywhere)
 

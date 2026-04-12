@@ -79,9 +79,9 @@
     <div class="layout">
       <h2 id="what-i-do-heading">What I Do</h2>
       <ul class="what-i-do__list">
-        <li><strong>Design</strong> runtime verification tooling and formal specifications for software where behaviour must be justified, not assumed.</li>
-        <li><strong>Build</strong> backends, services, and streaming data systems that stay observable and maintainable under load.</li>
-        <li><strong>Apply</strong> machine learning when the problem comes with data, baselines, and criteria you can actually measure.</li>
+        <li><strong>Specify and verify</strong> behaviour under load: monitors, formal specs, and experiments that pin claims to traces—not slide decks.</li>
+        <li><strong>Ship</strong> streaming pipelines and services with measured throughput (e.g. 10⁷-scale events/day) and operable runbooks, not “works on my machine.”</li>
+        <li><strong>Train and evaluate</strong> ML only with held-out metrics and baselines—e.g. CNN classifiers at ~93% accuracy where labels and failure modes are explicit.</li>
       </ul>
     </div>
   </section>
@@ -99,6 +99,20 @@
     </div>
   </section>
 
+  <section class="how-i-build reveal" id="how-i-build" aria-labelledby="how-i-build-heading">
+    <div class="layout">
+      <h2 id="how-i-build-heading">How I Build Systems</h2>
+      <p class="how-i-build__intro">Principles I default to—whether the stack is streaming analytics, a web product, or verification tooling.</p>
+      <ul class="how-i-build__list">
+        <li><strong>Load and failure before features.</strong> Sketch callers, rough rates, and what breaks when traffic or data spikes—then pick queues, partitioning, or batching when profiling shows a real bottleneck, not on day one for every box.</li>
+        <li><strong>Boring boundaries.</strong> Clear schemas, explicit error paths, and logs you can search; keep “clever” behind small modules you can test and replace.</li>
+        <li><strong>Reliability matches risk.</strong> Tighter invariants, tests, or monitors on money, safety, and data you cannot easily roll back; lighter guards where mistakes are cheap and fixable.</li>
+        <li><strong>Correctness where there is a spec.</strong> Wire checks to written behaviour—API contracts, migrations, formal specs, or runtime monitors—so reviews argue about intent, not guesswork.</li>
+        <li><strong>One repeatable path to prod.</strong> Scripted build and deploy, pinned versions, minimal hand-tuned laptops—so time goes to behaviour and operations, not reproducing environments.</li>
+      </ul>
+    </div>
+  </section>
+
   <section class="featured-work reveal" aria-labelledby="featured-heading">
     <div class="layout">
       <div class="section-head">
@@ -107,31 +121,51 @@
       </div>
       <div class="featured-work__grid">
         <article class="featured-card">
+          <figure class="featured-card__figure">
+            <img src="assets/images/projects/rv-pou-monitoring.svg" width="720" height="200" alt="Diagram: PLC program units, specification, runtime monitor, verdict" loading="lazy" decoding="async" />
+            <figcaption class="featured-card__caption">Logical RV dataflow: observed POUs checked against specs; monitor emits pass/fail (schematic).</figcaption>
+          </figure>
           <span class="featured-card__kind">Research paper</span>
           <h3 class="featured-card__title">DSN 2025 — runtime verification for industrial controllers</h3>
-          <p class="featured-card__desc">Runtime monitoring and formal treatment of program organization units in safety-related controller code.</p>
-          <p class="featured-card__metric">IEEE/IFIP DSN 2025 · peer-reviewed</p>
+          <p class="featured-card__desc">Safety PLC code needs monitors that match what was certified—not ad-hoc logging.<br />
+            Co-authored RV formulation, setup, and evaluation for <strong>safe program organization units</strong> in running controller logic.</p>
+          <p class="featured-card__metric">Outcome · IEEE/IFIP DSN 2025, peer-reviewed (flagship dependability venue)</p>
           <a class="featured-card__more" href="publications.html#pub-dsn">Publication details →</a>
         </article>
         <article class="featured-card">
+          <figure class="featured-card__figure">
+            <img src="assets/images/projects/phd-toolchain.svg" width="720" height="200" alt="Diagram: Structured Text to C transpiler and IDE-integrated monitors" loading="lazy" decoding="async" />
+            <figcaption class="featured-card__caption">ST→C transpilation and monitor hooks so verification rides alongside real engineering toolchains.</figcaption>
+          </figure>
           <span class="featured-card__kind">PhD · runtime verification</span>
           <h3 class="featured-card__title">Verification framework for controller software</h3>
-          <p class="featured-card__desc">Specification languages, monitoring, and tooling co-developed with industry partners for dependable automation.</p>
-          <p class="featured-card__metric">Industrial PhD · University of Genova</p>
+          <p class="featured-card__desc">Industrial partners need checks that plug into real toolchains—not proofs that stop at PDFs.<br />
+            Built monitors, C/ST-linked specifications, and transpilation paths (e.g. ST→C), stress-tested on representative controller workloads.</p>
+          <p class="featured-card__metric">Outcome · Industrial PhD track, University of Genova + live partner integration</p>
           <a class="featured-card__more" href="research.html">Research overview →</a>
         </article>
         <article class="featured-card">
+          <figure class="featured-card__figure">
+            <img src="assets/images/projects/rmlgym-flow.svg" width="720" height="200" alt="Diagram: reward machine, RMLGym API, RL policy, environment loop" loading="lazy" decoding="async" />
+            <figcaption class="featured-card__caption">RMLGym exposes formal reward machines through a Gym-style loop so objectives stay inspectable.</figcaption>
+          </figure>
           <span class="featured-card__kind">Research paper</span>
           <h3 class="featured-card__title">RMLGym — reward machines meet reinforcement learning</h3>
-          <p class="featured-card__desc">A formal reward-machine layer to structure RL experiments with explicit, checkable objectives.</p>
-          <p class="featured-card__metric">CEUR Vol. 3579 · workshop</p>
+          <p class="featured-card__desc">RL rewards are often opaque—hard to tell if an agent met the <em>intended</em> objective.<br />
+            Published <strong>RMLGym</strong>: reward machines wired into Gym-style training so objectives stay explicit and comparable across runs.</p>
+          <p class="featured-card__metric">Outcome · CEUR Vol. 3579 (workshop) · open formulation for formal RL benchmarks</p>
           <a class="featured-card__more" href="publications.html#pub-rmlgym">Publication details →</a>
         </article>
         <article class="featured-card">
+          <figure class="featured-card__figure featured-card__figure--dark">
+            <img src="assets/images/projects/siem-streaming.svg" width="720" height="220" alt="Diagram: sources, Kafka, Spark, HBase, PostgreSQL, rule engine for security analytics" loading="lazy" decoding="async" />
+            <figcaption class="featured-card__caption">High-level analytics path: stream ingest, distributed processing, stores, then correlation rule engine (roles—not a deployment map).</figcaption>
+          </figure>
           <span class="featured-card__kind">Large-scale data system</span>
           <h3 class="featured-card__title">Security analytics streaming pipeline</h3>
-          <p class="featured-card__desc">End-to-end ingestion and rule processing over streaming telemetry for network security analytics.</p>
-          <p class="featured-card__metric">30M+ events/day · Spark, Kafka, HBase</p>
+          <p class="featured-card__desc">SOC workflows needed correlated rules on bursty telemetry without dropping events on spikes.<br />
+            Implemented Spark–Kafka–HBase–PostgreSQL ingest plus a throughput-tuned <strong>rule engine</strong> path for network-security analytics.</p>
+          <p class="featured-card__metric">Outcome · 30M+ events/day sustained; production SIEM deployment</p>
           <a class="featured-card__more" href="engineering.html">Engineering details →</a>
         </article>
       </div>
@@ -170,31 +204,31 @@
             <div class="home-nav-grid">
               <a href="about.html" class="home-tile">
                 <h3>About</h3>
-                <p>Background, how I combine rigorous methods with shipping software, and a snapshot of roles and languages.</p>
+                <p>Who I am: PhD on verification-heavy automation, ex-SIEM-scale data work, shipped web products—stated with numbers where it matters.</p>
               </a>
               <a href="research.html" class="home-tile">
                 <h3>Research</h3>
-                <p>PhD focus: runtime verification for PLCs, specifications, RMLGym, and how I build evidence.</p>
+                <p>RV monitors, specs, and papers (DSN, CEUR): what problem each thread solves and what was measured.</p>
               </a>
               <a href="engineering.html" class="home-tile">
                 <h3>Engineering</h3>
-                <p>Industry and product work: streaming analytics, full-stack delivery, stacks, and how I approach builds.</p>
+                <p>10⁷-event/day pipelines, Laravel platform at 5k+ users, stacks named honestly—problem, build, throughput or reach.</p>
               </a>
               <a href="publications.html" class="home-tile">
                 <h3>Publications</h3>
-                <p>Papers and workshops, with links to DOI, PDF, Scholar, and ORCID.</p>
+                <p>DSN + CEUR: one-line contribution per paper, DOI/PDF, then Scholar/ORCID for the full list.</p>
               </a>
               <a href="teaching.html" class="home-tile">
                 <h3>Teaching</h3>
-                <p>Teaching support roles and courses.</p>
+                <p>Distributed Computing support: what students were stuck on, what I fixed at the whiteboard, time-boxed.</p>
               </a>
               <a href="education.html" class="home-tile">
                 <h3>Education</h3>
-                <p>Degrees and programmes from PhD through BCA.</p>
+                <p>Degrees with grades where relevant—PhD through BCA—no narrative fluff.</p>
               </a>
               <a href="contact.html" class="home-tile">
                 <h3>Contact</h3>
-                <p>Affiliation, email, and professional profiles.</p>
+                <p>Lab address, email, and profiles—straight paths to reach me.</p>
               </a>
             </div>
           </section>

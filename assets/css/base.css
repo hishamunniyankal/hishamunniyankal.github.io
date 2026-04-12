@@ -17,10 +17,23 @@ html {
 body {
   font-family: var(--font-sans);
   font-size: 17px;
+  font-weight: var(--font-weight-body);
   line-height: 1.65;
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--font-weight-heading);
+}
+
+strong,
+b {
+  font-weight: var(--font-weight-em);
 }
 
 a {
@@ -31,6 +44,29 @@ a {
 
 a:hover {
   color: var(--color-link-hover);
+}
+
+/* Main content links: subtle underline reveals primary accent on hover */
+.page-main main a:not(.home-tile):not(.pub-badge):not(.featured-card__more) {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    text-decoration-color var(--dur-fast) var(--ease-out);
+}
+
+.page-main main a:not(.home-tile):not(.pub-badge):not(.featured-card__more):hover {
+  text-decoration-color: var(--color-primary-soft);
+}
+
+.page-main main .social-links a {
+  text-decoration: none;
+}
+
+.page-main main .social-links a:hover {
+  color: var(--color-primary);
 }
 
 a:focus-visible {

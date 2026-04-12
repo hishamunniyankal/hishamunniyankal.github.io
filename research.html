@@ -56,7 +56,7 @@
         <main id="main-content">
           <header class="page-header reveal">
             <h1>Research</h1>
-            <p class="page-header__lead">PhD &amp; academic work on dependable PLC software and formal approaches.</p>
+            <p class="page-header__lead">PhD work: close the gap between what controllers <em>should</em> do and what you can <em>observe</em> at runtime—with specs, monitors, and published evaluations.</p>
           </header>
 
           <section class="section-block reveal" aria-labelledby="research-focus-heading">
@@ -65,33 +65,47 @@
               <span class="section-head__meta">PhD &amp; academic</span>
             </div>
             <p class="section-lead">
-              My doctoral work targets <strong>dependable PLC software</strong>: specifying expected behaviour, monitoring at runtime, and connecting to industrial toolchains—
-              including transpilation from Structured Text (ST) to C where it improves integration, portability, or analysis.
+              Controllers fail quietly if monitors drift from certified behaviour—so specs, RV monitors, and ST→C bridges must earn their keep in experiments or in print (DSN, CEUR).
             </p>
             <div class="card-grid">
               <article class="card">
+                <figure class="card__figure">
+                  <img src="assets/images/projects/rv-pou-monitoring.svg" width="720" height="200" alt="Schematic: PLC POUs, specification, RV monitor, verdict" loading="lazy" decoding="async" />
+                  <figcaption class="card__caption">Monitoring path for safe program organization units (conceptual dataflow).</figcaption>
+                </figure>
                 <h3>Runtime verification for PLCs</h3>
                 <p>
-                  Framework design and evaluation for programmable logic controllers, with emphasis on safe program organization units
-                  and experiments that say something meaningful about real-world control logic.
+                  Safe program units need online checks without taking lines down. Built an RV stack evaluated on controller-style workloads; <strong>outcome</strong> — DSN 2025 paper + trace-backed evaluation.
                 </p>
               </article>
               <article class="card">
+                <figure class="card__figure">
+                  <img src="assets/images/projects/phd-toolchain.svg" width="720" height="200" alt="Schematic: ST to C transpiler and IDE-integrated monitors" loading="lazy" decoding="async" />
+                  <figcaption class="card__caption">ST→C and hooks so specs compile next to engineers’ workflows.</figcaption>
+                </figure>
                 <h3>Specifications that fit practice</h3>
                 <p>
-                  Using C as a specification language where it aligns with workflows engineers already reason about; tooling that bridges academic models and shop-floor constraints.
+                  Temporal logics rarely ship inside vendor IDEs. Delivered C-centric specs, ST→C transpilation, and integration hooks; <strong>outcome</strong> — partners run verification paths, not just read them.
                 </p>
               </article>
               <article class="card">
+                <figure class="card__figure">
+                  <img src="assets/images/projects/rmlgym-flow.svg" width="720" height="200" alt="Schematic: reward machine, RMLGym, RL policy, environment" loading="lazy" decoding="async" />
+                  <figcaption class="card__caption">Reward machines exposed via a Gym-style API for comparable RL runs.</figcaption>
+                </figure>
                 <h3>Formal structure for learning</h3>
                 <p>
-                  RMLGym connects reward machines and reinforcement learning—bringing formal, property-based structure into RL settings (see <a href="publications.html">publications</a>).
+                  RL rewards often hide whether intent was met. Shipped RMLGym (reward machines × Gym APIs); <strong>outcome</strong> — CEUR paper, explicit objectives per run — see <a href="publications.html">publications</a>.
                 </p>
               </article>
               <article class="card">
+                <figure class="card__figure">
+                  <img src="assets/images/projects/trace-eval.svg" width="560" height="160" alt="Schematic: execution traces into evaluation harness producing metrics" loading="lazy" decoding="async" />
+                  <figcaption class="card__caption">Traces fed through a harness so numbers—not prose—back each claim.</figcaption>
+                </figure>
                 <h3>Evidence &amp; rigour</h3>
                 <p>
-                  Literature foundations in formal verification and RV; experimental methodology that backs claims with reproducible artefacts where possible.
+                  RV claims need logs and baselines, not adjectives. Built harnesses + literature-grounded comparisons; <strong>outcome</strong> — claims scoped to measured workloads only.
                 </p>
               </article>
             </div>

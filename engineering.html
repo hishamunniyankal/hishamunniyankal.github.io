@@ -56,7 +56,7 @@
         <main id="main-content">
           <header class="page-header reveal">
             <h1>Engineering</h1>
-            <p class="page-header__lead">Industry and product experience alongside academic research.</p>
+            <p class="page-header__lead">Production systems first: named stacks, real throughput and user counts, and what each build was <em>for</em>.</p>
           </header>
 
           <section class="section-block reveal" aria-labelledby="eng-detail-heading">
@@ -65,23 +65,36 @@
               <span class="section-head__meta">Industry &amp; product</span>
             </div>
             <p class="section-lead">
-              Research is one part of how I work; the other is building systems that stay up, scale, and remain understandable.
-              Below is a concise view of engineering experience—see my <a href="cv.pdf" target="_blank" rel="noopener">CV</a> for timelines and detail.
+              Snapshots below follow <strong>problem → what shipped → number that proves scale or reach</strong>. Full timeline: <a href="cv.pdf" target="_blank" rel="noopener">CV</a>.
             </p>
+            <div class="eng-figures" aria-label="Architecture diagrams for major deliveries">
+              <figure class="project-figure">
+                <img src="assets/images/projects/siem-streaming.svg" width="720" height="220" alt="Architecture: Kafka Spark HBase PostgreSQL feeding a rule engine" loading="lazy" decoding="async" />
+                <figcaption>Security analytics: stream ingest (Kafka), distributed processing (Spark), stores (HBase, PostgreSQL), then correlation rules—<strong>30M+ events/day</strong> sustained.</figcaption>
+              </figure>
+              <figure class="project-figure">
+                <img src="assets/images/projects/laravel-edu-stack.svg" width="640" height="200" alt="Architecture: browsers to Laravel application server to MySQL" loading="lazy" decoding="async" />
+                <figcaption>Education product: browser clients → Laravel 7 services → MySQL—<strong>5,000+ students</strong>, <strong>200+ schools</strong> on the live system.</figcaption>
+              </figure>
+            </div>
             <div class="eng-columns">
               <div class="eng-block">
                 <h3>What I have built &amp; shipped</h3>
                 <ul>
                   <li>
-                    <strong>Security analytics pipeline</strong> — real-time streaming with Apache Spark, Kafka, HBase, and PostgreSQL;
-                    high-throughput rule engine processing tens of millions of events per day for network analytics.
+                    <strong>Security analytics pipeline</strong> — <em>Problem:</em> correlate streaming security telemetry under burst load without silent drops.
+                    <em>Shipped:</em> Spark + Kafka + HBase + PostgreSQL ingest, optimized rule-engine path for network analytics.
+                    <em>Scale:</em> <strong>30M+ events/day</strong> processed in production SIEM context.
                   </li>
                   <li>
-                    <strong>Education platform</strong> — led full lifecycle for a Laravel-based math practice product used by 5,000+ students and 200+ schools
-                    (architecture, database design, client coordination, deployment).
+                    <strong>Education platform (Laravel)</strong> — <em>Problem:</em> schools needed a reliable practice product, not a demo.
+                    <em>Shipped:</em> schema, APIs, Laravel 7 services, deployment pipeline—owned architecture and client handoff.
+                    <em>Reach:</em> <strong>5,000+ students</strong>, <strong>200+ schools</strong> on the live system.
                   </li>
                   <li>
-                    <strong>Web &amp; tooling</strong> — static and dynamic sites; ongoing freelance engineering; contributions to PLC IDE-related tooling and transpilers in the PhD context.
+                    <strong>PLC IDE–adjacent tooling (PhD)</strong> — <em>Problem:</em> verification ideas must compile and run beside engineers’ ST/C workflows.
+                    <em>Shipped:</em> transpilers, glue services, and integration experiments—not generic “scripts.”
+                    <em>Outcome:</em> feeds directly into published RV work (see Research / Publications).
                   </li>
                 </ul>
               </div>
