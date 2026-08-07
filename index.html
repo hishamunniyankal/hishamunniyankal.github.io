@@ -3,245 +3,453 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hisham Unniyankal — PhD · Formal methods, data systems &amp; AI</title>
-  <meta name="description" content="Hisham Unniyankal — PhD in Computer Science (Genova). Formal methods, data systems, and AI: verification tooling and production software." />
+  <title>Hisham Unniyankal | Doctoral Researcher &amp; Software Engineer</title>
+  <meta name="description" content="Doctoral researcher at the University of Genoa working on runtime verification for PLC systems, with software engineering experience in large-scale security analytics and web platforms." />
+  <link rel="canonical" href="https://hishamunniyankal.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Hisham Unniyankal | Doctoral Researcher &amp; Software Engineer" />
+  <meta property="og:description" content="Doctoral researcher at the University of Genoa working on runtime verification for PLC systems, with software engineering experience in large-scale security analytics and web platforms." />
+  <meta property="og:url" content="https://hishamunniyankal.github.io/" />
+  <meta property="profile:first_name" content="Hisham" />
+  <meta property="profile:last_name" content="Unniyankal" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Hisham Unniyankal | Doctoral Researcher &amp; Software Engineer" />
+  <meta name="twitter:description" content="Runtime verification for PLC systems and large-scale software engineering." />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/sections.css" />
-  <link rel="stylesheet" href="assets/css/animations.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hisham Unniyankal",
+    "jobTitle": "Doctoral Researcher & Software Engineer",
+    "email": "mailto:hisham.unniyankal@edu.unige.it",
+    "url": "https://hishamunniyankal.github.io/",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Genoa" },
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "University of Genoa" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Genoa", "addressCountry": "IT" },
+    "knowsAbout": ["Runtime verification", "Formal methods", "Programmable logic controllers", "Data streaming systems", "Software engineering"],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=ikgQn0IAAAAJ&hl=en",
+      "https://orcid.org/0009-0008-2407-5150",
+      "https://github.com/hishamunniyankal",
+      "https://www.linkedin.com/in/hishamu/"
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <nav class="site-nav" aria-label="Primary">
-    <a href="index.html" class="site-nav__brand">Hisham <span>Unniyankal</span></a>
-    <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
-      <span class="visually-hidden">Menu</span>
-      <span class="site-nav__toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
-    </button>
-    <ul class="site-nav__links" id="nav-menu">
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="engineering.html">Engineering</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <!-- ============================ Primary navigation ============================ -->
+  <nav class="nav" aria-label="Primary">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="#top">Hisham <b>Unniyankal</b></a>
+      <button type="button" class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="visually-hidden">Menu</span>
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="nav__cv" href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="hero__gridlines" aria-hidden="true"></div>
-    <div class="layout hero__grid">
-      <div class="hero__intro">
-        <p class="hero__badge hero-animate stagger-1"><span class="hero__badge-dot" aria-hidden="true"></span> Open to collaboration</p>
-        <h1 class="hero-animate stagger-2">Hisham Unniyankal</h1>
-        <p class="hero__roles hero-animate stagger-3">
-          I <strong>build</strong> and <strong>study</strong> reliable software where <strong>formal methods</strong>, <strong>data systems</strong>, and <strong>AI</strong> meet—runtime verification and specifications in my PhD; streaming stacks, backends, and shipped products in industry.
+  <main id="main-content" tabindex="-1">
+    <!-- ============================ Hero ============================ -->
+    <header class="hero" id="top">
+      <div class="wrap">
+        <p class="hero__eyebrow">Dependable industrial software</p>
+        <h1>Hisham Unniyankal</h1>
+        <p class="hero__role">Doctoral Researcher &amp; Software Engineer</p>
+        <p class="hero__statement">
+          I combine runtime verification and formal methods with hands-on software
+          engineering. My PhD develops verification for programmable logic
+          controllers; my industry work built large-scale data and web systems.
         </p>
-        <p class="hero__institution hero-animate stagger-4">
-          Computer Science PhD, Università degli Studi di Genova · Genova, Italy
-        </p>
-        <div class="hero__actions hero-animate stagger-5">
-          <a class="hero__cta--primary" href="mailto:uaj.hisham@gmail.com">Email</a>
-          <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
-          <a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
-          <a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">LinkedIn</a>
+        <p class="hero__affil">University of Genoa, Italy</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#research">View research</a>
+          <a class="btn btn--ghost" href="#experience">View experience</a>
+          <a class="btn btn--ghost" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn btn--ghost" href="#contact">Contact</a>
+        </div>
+        <ul class="hero__links">
+          <li><a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a></li>
+          <li><a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ============================ Profile ============================ -->
+    <section class="section" id="profile" aria-labelledby="profile-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="profile-title">Profile</h2>
+        <div class="profile__lead reveal">
+          <p>
+            I am a doctoral researcher at the University of Genoa (DIBRIS), working
+            on runtime verification and formal methods for programmable logic
+            controller (PLC) systems. My PhD is an industrial collaboration with
+            Technoleader SRL and COBO S.p.A., focused on making verification
+            practical inside real controller development workflows.
+          </p>
+          <p>
+            Before the PhD I spent several years as a software engineer across
+            industrial automation, big-data streaming, and full-stack web
+            development. That background keeps my research grounded: I care about
+            specifications and monitors that run against real systems, and about
+            software that is measured, operable, and maintainable.
+          </p>
+          <p class="profile__open">
+            Open to research collaborations and relevant software-engineering
+            opportunities.
+          </p>
+        </div>
+
+        <ul class="capabilities reveal" aria-label="Capabilities">
+          <li class="capability">
+            <h3>Runtime verification &amp; formal methods</h3>
+            <ul class="capability__tags">
+              <li>C</li><li>Structured Text</li><li>RML</li><li>Monitors</li><li>Specifications</li>
+            </ul>
+          </li>
+          <li class="capability">
+            <h3>PLCs &amp; industrial automation</h3>
+            <ul class="capability__tags">
+              <li>ST&#8594;C transpilation</li><li>PLC IDE integration</li><li>Controller workflows</li>
+            </ul>
+          </li>
+          <li class="capability">
+            <h3>Backend &amp; API development</h3>
+            <ul class="capability__tags">
+              <li>Java / Spring</li><li>FastAPI</li><li>PHP / Laravel</li>
+            </ul>
+          </li>
+          <li class="capability">
+            <h3>Streaming &amp; data systems</h3>
+            <ul class="capability__tags">
+              <li>Apache Spark</li><li>Kafka</li><li>HBase</li><li>PostgreSQL</li><li>MySQL</li>
+            </ul>
+          </li>
+          <li class="capability">
+            <h3>AI/ML &amp; experimental evaluation</h3>
+            <ul class="capability__tags">
+              <li>Python</li><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li>
+            </ul>
+          </li>
+          <li class="capability">
+            <h3>Development &amp; deployment</h3>
+            <ul class="capability__tags">
+              <li>Linux</li><li>AWS</li><li>Git</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================ Experience ============================ -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="experience-title">Experience</h2>
+        <p class="section__intro reveal">Two connected tracks: academic research and industry software engineering.</p>
+
+        <div class="track reveal">
+          <h3 class="track__label">Research &amp; academic</h3>
+          <ol class="timeline">
+            <li class="entry">
+              <div class="entry__head">
+                <span class="entry__role">Doctoral Researcher</span>
+                <span class="entry__dates">Nov 2023 &ndash; present</span>
+              </div>
+              <p class="entry__org">University of Genoa (DIBRIS)</p>
+              <p class="entry__context">
+                Industrial PhD in collaboration with Technoleader SRL and COBO
+                S.p.A., on runtime verification and formal methods for PLC systems.
+              </p>
+              <ul class="entry__points">
+                <li>Developed a runtime verification framework for PLC systems using C as a specification language, designed to integrate with existing PLC workflows.</li>
+                <li>Developed a Structured Text (ST) to C transpiler to improve cross-platform compatibility and performance.</li>
+                <li>Simulated and evaluated the framework on controller-style workloads, and contributed to software development and design concepts for PLC integrated development environments.</li>
+              </ul>
+              <p class="entry__tech">C · Structured Text · runtime verification</p>
+            </li>
+            <li class="entry">
+              <div class="entry__head">
+                <span class="entry__role">Visiting Researcher</span>
+                <span class="entry__dates">Dec 2025 &ndash; Feb 2026</span>
+              </div>
+              <p class="entry__org">University of Malta</p>
+              <p class="entry__context">
+                Research visit connected to runtime verification and formal methods.
+              </p>
+            </li>
+            <li class="entry">
+              <div class="entry__head">
+                <span class="entry__role">Teaching Support &mdash; Distributed Computing</span>
+                <span class="entry__dates">Nov 2024 &ndash; Feb 2025</span>
+              </div>
+              <p class="entry__org">University of Genoa</p>
+              <p class="entry__context">
+                Supported the Distributed Computing course for graduate students.
+              </p>
+              <ul class="entry__points">
+                <li>Provided academic and technical assistance to graduate students on distributed-systems concepts, labs, and tooling.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <div class="track reveal">
+          <h3 class="track__label">Industry &amp; software engineering</h3>
+          <ol class="timeline">
+            <li class="entry">
+              <div class="entry__head">
+                <span class="entry__role">Freelance Software Engineer</span>
+                <span class="entry__dates">Apr 2020 &ndash; present</span>
+              </div>
+              <p class="entry__org">Independent</p>
+              <p class="entry__context">
+                Led the software development lifecycle for an educational
+                math-practice platform.
+              </p>
+              <ul class="entry__points">
+                <li>Delivered a platform used by 5,000+ students across 200+ schools.</li>
+                <li>Designed a scalable architecture and database schema for multi-user access.</li>
+                <li>Managed client communication and requirements, UI integration, deployment, and post-launch maintenance.</li>
+              </ul>
+              <p class="entry__tech">Laravel 7 · PHP · HTML/CSS · MySQL</p>
+            </li>
+            <li class="entry">
+              <div class="entry__head">
+                <span class="entry__role">Software Engineer</span>
+                <span class="entry__dates">May 2018 &ndash; Mar 2020</span>
+              </div>
+              <p class="entry__org">Bluecast Technologies &mdash; Kochi, India</p>
+              <p class="entry__context">
+                Worked on a Security Information and Event Management (SIEM) product.
+              </p>
+              <ul class="entry__points">
+                <li>Designed and optimised a real-time streaming pipeline handling 30M+ events/day for network security analytics.</li>
+                <li>Engineered a high-throughput rule engine to process streaming data and improve threat-detection accuracy.</li>
+              </ul>
+              <p class="entry__tech">Apache Spark · Kafka · HBase · PostgreSQL</p>
+            </li>
+            <li class="entry">
+              <div class="entry__head">
+                <span class="entry__role">Earlier experience</span>
+                <span class="entry__dates">2016 &ndash; 2018</span>
+              </div>
+              <p class="entry__org">Freelance &amp; technical support</p>
+              <ul class="entry__points">
+                <li>Freelance web developer (2017&ndash;2018): built static and dynamic websites.</li>
+                <li>Desktop support engineer (2016&ndash;2017): hardware/software troubleshooting and system/network administration across organisations.</li>
+              </ul>
+              <p class="entry__tech">HTML · CSS · JavaScript · jQuery · PHP · Linux</p>
+            </li>
+          </ol>
         </div>
       </div>
-      <aside class="hero__panel hero-animate-panel" aria-label="At a glance">
-        <p class="hero__panel-title">At a glance</p>
-        <dl>
-          <dt>Explores</dt>
-          <dd>Formal verification · Runtime monitoring · Dependable automation</dd>
-          <dt>Builds</dt>
-          <dd>Data pipelines · Services &amp; APIs · AI-accelerated tooling</dd>
-          <dt>Profiles</dt>
-          <dd>
-            <a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a>
-            ·
-            <a href="https://www.researchgate.net/profile/Hisham-Unniyankal?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
-          </dd>
-        </dl>
-      </aside>
-    </div>
-  </header>
+    </section>
 
-  <section class="what-i-do" aria-labelledby="what-i-do-heading">
-    <div class="layout">
-      <h2 id="what-i-do-heading">What I Do</h2>
-      <ul class="what-i-do__list">
-        <li><strong>Specify and verify</strong> behaviour under load: monitors, formal specs, and experiments that pin claims to traces—not slide decks.</li>
-        <li><strong>Ship</strong> streaming pipelines and services with measured throughput (e.g. 10⁷-scale events/day) and operable runbooks, not “works on my machine.”</li>
-        <li><strong>Train and evaluate</strong> ML only with held-out metrics and baselines—e.g. CNN classifiers at ~93% accuracy where labels and failure modes are explicit.</li>
-      </ul>
-    </div>
-  </section>
+    <!-- ============================ Selected work ============================ -->
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="research-title">Selected work</h2>
+        <p class="section__intro reveal">Research and engineering projects that connect verification with practical systems.</p>
 
-  <section class="impact-highlights reveal" aria-labelledby="impact-heading">
-    <div class="layout impact-highlights__inner">
-      <h2 id="impact-heading" class="impact-highlights__label">Impact Highlights</h2>
-      <ul class="impact-highlights__row" role="list">
-        <li>30M+ events/day processed in production streaming pipeline</li>
-        <li>DSN 2025 publication · IEEE/IFIP dependable systems conference</li>
-        <li>5,000+ students &amp; 200+ schools on shipped education platform</li>
-        <li>Industrial PhD · verification tooling co-built with industry partners</li>
-        <li>Systems at scale: Spark · Kafka · HBase · PostgreSQL analytics stack</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="how-i-build reveal" id="how-i-build" aria-labelledby="how-i-build-heading">
-    <div class="layout">
-      <h2 id="how-i-build-heading">How I Build Systems</h2>
-      <p class="how-i-build__intro">Principles I default to—whether the stack is streaming analytics, a web product, or verification tooling.</p>
-      <ul class="how-i-build__list">
-        <li><strong>Load and failure before features.</strong> Sketch callers, rough rates, and what breaks when traffic or data spikes—then pick queues, partitioning, or batching when profiling shows a real bottleneck, not on day one for every box.</li>
-        <li><strong>Boring boundaries.</strong> Clear schemas, explicit error paths, and logs you can search; keep “clever” behind small modules you can test and replace.</li>
-        <li><strong>Reliability matches risk.</strong> Tighter invariants, tests, or monitors on money, safety, and data you cannot easily roll back; lighter guards where mistakes are cheap and fixable.</li>
-        <li><strong>Correctness where there is a spec.</strong> Wire checks to written behaviour—API contracts, migrations, formal specs, or runtime monitors—so reviews argue about intent, not guesswork.</li>
-        <li><strong>One repeatable path to prod.</strong> Scripted build and deploy, pinned versions, minimal hand-tuned laptops—so time goes to behaviour and operations, not reproducing environments.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="featured-work reveal" aria-labelledby="featured-heading">
-    <div class="layout">
-      <div class="section-head">
-        <h2 id="featured-heading">Featured Work</h2>
-        <span class="section-head__meta">Research &amp; engineering</span>
-      </div>
-      <div class="featured-work__grid">
-        <article class="featured-card">
-          <figure class="featured-card__figure">
-            <img src="assets/images/projects/rv-pou-monitoring.svg" width="720" height="200" alt="Diagram: PLC program units, specification, runtime monitor, verdict" loading="lazy" decoding="async" />
-            <figcaption class="featured-card__caption">Logical RV dataflow: observed POUs checked against specs; monitor emits pass/fail (schematic).</figcaption>
-          </figure>
-          <span class="featured-card__kind">Research paper</span>
-          <h3 class="featured-card__title">DSN 2025 — runtime verification for industrial controllers</h3>
-          <p class="featured-card__desc">Safety PLC code needs monitors that match what was certified—not ad-hoc logging.<br />
-            Co-authored RV formulation, setup, and evaluation for <strong>safe program organization units</strong> in running controller logic.</p>
-          <p class="featured-card__metric">Outcome · IEEE/IFIP DSN 2025, peer-reviewed (flagship dependability venue)</p>
-          <a class="featured-card__more" href="publications.html#pub-dsn">Publication details →</a>
-        </article>
-        <article class="featured-card">
-          <figure class="featured-card__figure">
-            <img src="assets/images/projects/phd-toolchain.svg" width="720" height="200" alt="Diagram: Structured Text to C transpiler and IDE-integrated monitors" loading="lazy" decoding="async" />
-            <figcaption class="featured-card__caption">ST→C transpilation and monitor hooks so verification rides alongside real engineering toolchains.</figcaption>
-          </figure>
-          <span class="featured-card__kind">PhD · runtime verification</span>
-          <h3 class="featured-card__title">Verification framework for controller software</h3>
-          <p class="featured-card__desc">Industrial partners need checks that plug into real toolchains—not proofs that stop at PDFs.<br />
-            Built monitors, C/ST-linked specifications, and transpilation paths (e.g. ST→C), stress-tested on representative controller workloads.</p>
-          <p class="featured-card__metric">Outcome · Industrial PhD track, University of Genova + live partner integration</p>
-          <a class="featured-card__more" href="research.html">Research overview →</a>
-        </article>
-        <article class="featured-card">
-          <figure class="featured-card__figure">
-            <img src="assets/images/projects/rmlgym-flow.svg" width="720" height="200" alt="Diagram: reward machine, RMLGym API, RL policy, environment loop" loading="lazy" decoding="async" />
-            <figcaption class="featured-card__caption">RMLGym exposes formal reward machines through a Gym-style loop so objectives stay inspectable.</figcaption>
-          </figure>
-          <span class="featured-card__kind">Research paper</span>
-          <h3 class="featured-card__title">RMLGym — reward machines meet reinforcement learning</h3>
-          <p class="featured-card__desc">RL rewards are often opaque—hard to tell if an agent met the <em>intended</em> objective.<br />
-            Published <strong>RMLGym</strong>: reward machines wired into Gym-style training so objectives stay explicit and comparable across runs.</p>
-          <p class="featured-card__metric">Outcome · CEUR Vol. 3579 (workshop) · open formulation for formal RL benchmarks</p>
-          <a class="featured-card__more" href="publications.html#pub-rmlgym">Publication details →</a>
-        </article>
-        <article class="featured-card">
-          <figure class="featured-card__figure featured-card__figure--dark">
-            <img src="assets/images/projects/siem-streaming.svg" width="720" height="220" alt="Diagram: sources, Kafka, Spark, HBase, PostgreSQL, rule engine for security analytics" loading="lazy" decoding="async" />
-            <figcaption class="featured-card__caption">High-level analytics path: stream ingest, distributed processing, stores, then correlation rule engine (roles—not a deployment map).</figcaption>
-          </figure>
-          <span class="featured-card__kind">Large-scale data system</span>
-          <h3 class="featured-card__title">Security analytics streaming pipeline</h3>
-          <p class="featured-card__desc">SOC workflows needed correlated rules on bursty telemetry without dropping events on spikes.<br />
-            Implemented Spark–Kafka–HBase–PostgreSQL ingest plus a throughput-tuned <strong>rule engine</strong> path for network-security analytics.</p>
-          <p class="featured-card__metric">Outcome · 30M+ events/day sustained; production SIEM deployment</p>
-          <a class="featured-card__more" href="engineering.html">Engineering details →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <div class="layout">
-    <div class="page-grid">
-      <aside class="page-toc" aria-label="Site navigation">
-        <p class="page-toc__label">On this site</p>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="engineering.html">Engineering</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </aside>
-
-      <div class="page-main">
-        <main id="main-content">
-          <section class="section-block reveal" aria-labelledby="welcome-heading">
-            <div class="section-head">
-              <h2 id="welcome-heading">Welcome</h2>
-              <span class="section-head__meta">PhD · software · systems</span>
-            </div>
-            <div class="home-intro">
+        <div class="work-grid reveal">
+          <article class="work-card">
+            <div class="work-card__body">
+              <span class="work-card__kind">Research</span>
+              <h3 class="work-card__title">Runtime verification for PLC program organization units</h3>
               <p>
-                This site is split into separate pages so each area is easy to edit and version independently—research narrative, engineering track record,
-                bibliography, teaching, and contact. Use the grid below or the sidebar to navigate.
+                Safe PLC logic needs online checks that reflect its intended
+                behaviour. I formalised runtime verification for program
+                organization units and evaluated it on controller-style workloads,
+                using C as the specification language.
+              </p>
+              <p class="work-card__meta">Published in the Industry Track of IEEE/IFIP DSN 2025 &mdash; <a href="#pub-dsn">publication details</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__body">
+              <span class="work-card__kind">Research &amp; engineering</span>
+              <h3 class="work-card__title">Structured Text to C transpiler</h3>
+              <p>
+                Verification and tooling are only adopted if they fit vendor PLC
+                workflows. I developed a Structured Text&#8594;C transpiler to improve
+                cross-platform compatibility and performance, letting the
+                verification framework run alongside existing controller toolchains.
+              </p>
+              <p class="work-card__meta">Method: language transpilation, PLC toolchain integration.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__body">
+              <span class="work-card__kind">Research</span>
+              <h3 class="work-card__title">RMLGym</h3>
+              <p>
+                Reinforcement-learning objectives are often implicit. I developed
+                RMLGym, a framework that integrates runtime verification with
+                reinforcement learning to generate formal, property-based rewards
+                that stay explicit and comparable across runs.
+              </p>
+              <p class="work-card__meta">Published in CEUR Workshop Proceedings, Vol. 3579 &mdash; <a href="#pub-rmlgym">publication details</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-card__body">
+              <span class="work-card__kind">Research &amp; engineering</span>
+              <h3 class="work-card__title">Sigma2RML transpiler</h3>
+              <p>
+                Security detection rules and formal verification frameworks usually
+                live apart. I engineered a transpiler that converts Sigma detection
+                rules into RML, enabling their integration with formal verification
+                frameworks &mdash; a bridge between security analytics and runtime
+                verification.
+              </p>
+              <p class="work-card__meta">Method: rule translation, formal specification.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Publications ============================ -->
+    <section class="section" id="publications" aria-labelledby="publications-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="publications-title">Publications</h2>
+        <p class="pub-note reveal">
+          Selected peer-reviewed work. Full list on
+          <a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          and <a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a>.
+        </p>
+        <ul class="pub-list reveal">
+          <li class="pub" id="pub-dsn">
+            <span class="pub__year">2025</span>
+            <div>
+              <p class="pub__title">Runtime Verification of Program Organization Units in Safe Programmable Logic Controller Systems</p>
+              <p class="pub__authors"><span class="me">Hisham Unniyankal</span>, Davide Ancona, Angelo Ferrando, Fabio Parodi, Alessandro Alessi, Federico Bottino</p>
+              <p class="pub__venue">Industry Track, IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) 2025</p>
+              <p class="pub__links">
+                <a class="pub__badge" href="https://doi.org/10.1109/DSN-S65789.2025.00050" target="_blank" rel="noopener">DOI: 10.1109/DSN-S65789.2025.00050</a>
               </p>
             </div>
-            <div class="home-nav-grid">
-              <a href="about.html" class="home-tile">
-                <h3>About</h3>
-                <p>Who I am: PhD on verification-heavy automation, ex-SIEM-scale data work, shipped web products—stated with numbers where it matters.</p>
-              </a>
-              <a href="research.html" class="home-tile">
-                <h3>Research</h3>
-                <p>RV monitors, specs, and papers (DSN, CEUR): what problem each thread solves and what was measured.</p>
-              </a>
-              <a href="engineering.html" class="home-tile">
-                <h3>Engineering</h3>
-                <p>10⁷-event/day pipelines, Laravel platform at 5k+ users, stacks named honestly—problem, build, throughput or reach.</p>
-              </a>
-              <a href="publications.html" class="home-tile">
-                <h3>Publications</h3>
-                <p>DSN + CEUR: one-line contribution per paper, DOI/PDF, then Scholar/ORCID for the full list.</p>
-              </a>
-              <a href="teaching.html" class="home-tile">
-                <h3>Teaching</h3>
-                <p>Distributed Computing support: what students were stuck on, what I fixed at the whiteboard, time-boxed.</p>
-              </a>
-              <a href="education.html" class="home-tile">
-                <h3>Education</h3>
-                <p>Degrees with grades where relevant—PhD through BCA—no narrative fluff.</p>
-              </a>
-              <a href="contact.html" class="home-tile">
-                <h3>Contact</h3>
-                <p>Lab address, email, and profiles—straight paths to reach me.</p>
-              </a>
+          </li>
+          <li class="pub" id="pub-rmlgym">
+            <span class="pub__year">2023</span>
+            <div>
+              <p class="pub__title">RMLGym: a Formal Reward Machine Framework for Reinforcement Learning</p>
+              <p class="pub__authors"><span class="me">Hisham Unniyankal</span>, Francesco Belardinelli, Angelo Ferrando, Vadim Malvone</p>
+              <p class="pub__venue">CEUR Workshop Proceedings, Vol. 3579</p>
+              <p class="pub__links">
+                <a class="pub__badge" href="https://ceur-ws.org/Vol-3579/paper1.pdf" target="_blank" rel="noopener">PDF</a>
+              </p>
             </div>
-          </section>
-        </main>
+          </li>
+        </ul>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <footer class="site-footer">
-    <p>
-      &copy; <span id="year">2026</span> Hisham Unniyankal — HTML, CSS &amp; vanilla JS —
-      <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
-    </p>
+    <!-- ============================ Background ============================ -->
+    <section class="section" id="background" aria-labelledby="background-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="background-title">Education</h2>
+        <p class="section__intro reveal">Teaching activity is listed under Experience.</p>
+        <ul class="edu-list reveal">
+          <li class="edu">
+            <span class="edu__degree">PhD in Computer Science</span>
+            <span class="edu__inst">University of Genoa, Genoa, Italy</span>
+            <span class="edu__status">Ongoing</span>
+            <span class="edu__dates">Nov 2023 &ndash; present</span>
+          </li>
+          <li class="edu">
+            <span class="edu__degree">M.Sc. in Computer Science (Data Science &amp; AI)</span>
+            <span class="edu__inst">University of Genoa, Genoa, Italy</span>
+            <span class="edu__dates">2020 &ndash; 2023</span>
+          </li>
+          <li class="edu">
+            <span class="edu__degree">Master of Computer Applications (MCA)</span>
+            <span class="edu__inst">Anna University, Coimbatore, India</span>
+            <span class="edu__dates">2014 &ndash; 2016</span>
+          </li>
+          <li class="edu">
+            <span class="edu__degree">Bachelor of Computer Applications (BCA)</span>
+            <span class="edu__inst">University of Calicut, Malappuram, India</span>
+            <span class="edu__dates">2011 &ndash; 2014</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================ Contact ============================ -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="contact-title">Contact</h2>
+        <p class="section__intro reveal">Open to research collaborations and relevant software-engineering opportunities.</p>
+        <div class="contact-grid reveal">
+          <div class="contact-card">
+            <h3>Email</h3>
+            <address>
+              <a href="mailto:hisham.unniyankal@edu.unige.it">hisham.unniyankal@edu.unige.it</a><br />
+              <a href="mailto:uaj.hisham@gmail.com">uaj.hisham@gmail.com</a>
+            </address>
+          </div>
+          <div class="contact-card">
+            <h3>Affiliation</h3>
+            <address>
+              DIBRIS, University of Genoa<br />
+              Genoa, Italy
+            </address>
+          </div>
+          <div class="contact-card">
+            <h3>Profiles</h3>
+            <ul class="link-list">
+              <li><a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a></li>
+              <li><a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://www.researchgate.net/profile/Hisham-Unniyankal" target="_blank" rel="noopener">ResearchGate</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ Footer ============================ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>&copy; <span id="year">2026</span> Hisham Unniyankal</p>
+      <ul class="footer__links">
+        <li><a href="mailto:hisham.unniyankal@edu.unige.it">Email</a></li>
+        <li><a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a></li>
+        <li><a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a></li>
+        <li><a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
   </footer>
 
   <script src="assets/js/main.js" defer></script>

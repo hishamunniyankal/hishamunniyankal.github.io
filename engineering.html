@@ -3,132 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engineering — Hisham Unniyankal</title>
-  <meta name="description" content="Software engineering: streaming analytics, Laravel products, stacks, and how Hisham Unniyankal ships systems." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+  <title>Redirecting &mdash; Hisham Unniyankal</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://hishamunniyankal.github.io/#experience" />
+  <meta http-equiv="refresh" content="0; url=./index.html#experience" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/sections.css" />
-  <link rel="stylesheet" href="assets/css/animations.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-
-  <nav class="site-nav" aria-label="Primary">
-    <a href="index.html" class="site-nav__brand">Hisham <span>Unniyankal</span></a>
-    <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="nav-menu" id="nav-toggle">
-      <span class="visually-hidden">Menu</span>
-      <span class="site-nav__toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
-    </button>
-    <ul class="site-nav__links" id="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="engineering.html" aria-current="page">Engineering</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="layout">
-    <div class="page-grid">
-      <aside class="page-toc" aria-label="Site navigation">
-        <p class="page-toc__label">On this site</p>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="engineering.html">Engineering</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </aside>
-
-      <div class="page-main">
-        <main id="main-content">
-          <header class="page-header reveal">
-            <h1>Engineering</h1>
-            <p class="page-header__lead">Production systems first: named stacks, real throughput and user counts, and what each build was <em>for</em>.</p>
-          </header>
-
-          <section class="section-block reveal" aria-labelledby="eng-detail-heading">
-            <div class="section-head">
-              <h2 id="eng-detail-heading">Track record</h2>
-              <span class="section-head__meta">Industry &amp; product</span>
-            </div>
-            <p class="section-lead">
-              Snapshots below follow <strong>problem → what shipped → number that proves scale or reach</strong>. Full timeline: <a href="cv.pdf" target="_blank" rel="noopener">CV</a>.
-            </p>
-            <div class="eng-figures" aria-label="Architecture diagrams for major deliveries">
-              <figure class="project-figure">
-                <img src="assets/images/projects/siem-streaming.svg" width="720" height="220" alt="Architecture: Kafka Spark HBase PostgreSQL feeding a rule engine" loading="lazy" decoding="async" />
-                <figcaption>Security analytics: stream ingest (Kafka), distributed processing (Spark), stores (HBase, PostgreSQL), then correlation rules—<strong>30M+ events/day</strong> sustained.</figcaption>
-              </figure>
-              <figure class="project-figure">
-                <img src="assets/images/projects/laravel-edu-stack.svg" width="640" height="200" alt="Architecture: browsers to Laravel application server to MySQL" loading="lazy" decoding="async" />
-                <figcaption>Education product: browser clients → Laravel 7 services → MySQL—<strong>5,000+ students</strong>, <strong>200+ schools</strong> on the live system.</figcaption>
-              </figure>
-            </div>
-            <div class="eng-columns">
-              <div class="eng-block">
-                <h3>What I have built &amp; shipped</h3>
-                <ul>
-                  <li>
-                    <strong>Security analytics pipeline</strong> — <em>Problem:</em> correlate streaming security telemetry under burst load without silent drops.
-                    <em>Shipped:</em> Spark + Kafka + HBase + PostgreSQL ingest, optimized rule-engine path for network analytics.
-                    <em>Scale:</em> <strong>30M+ events/day</strong> processed in production SIEM context.
-                  </li>
-                  <li>
-                    <strong>Education platform (Laravel)</strong> — <em>Problem:</em> schools needed a reliable practice product, not a demo.
-                    <em>Shipped:</em> schema, APIs, Laravel 7 services, deployment pipeline—owned architecture and client handoff.
-                    <em>Reach:</em> <strong>5,000+ students</strong>, <strong>200+ schools</strong> on the live system.
-                  </li>
-                  <li>
-                    <strong>PLC IDE–adjacent tooling (PhD)</strong> — <em>Problem:</em> verification ideas must compile and run beside engineers’ ST/C workflows.
-                    <em>Shipped:</em> transpilers, glue services, and integration experiments—not generic “scripts.”
-                    <em>Outcome:</em> feeds directly into published RV work (see Research / Publications).
-                  </li>
-                </ul>
-              </div>
-              <div class="eng-block">
-                <h3>How I work</h3>
-                <ul>
-                  <li>Clarify requirements with stakeholders; design for observability and maintainability.</li>
-                  <li>Prefer simple architectures until complexity is justified; automate repetitive work.</li>
-                  <li>Bridge formal specs and runnable code—useful in both verification research and production backends.</li>
-                </ul>
-                <div class="tech-strip" aria-label="Technologies">
-                  <span class="tech-pill">Python</span>
-                  <span class="tech-pill">C / tooling</span>
-                  <span class="tech-pill">Spark · Kafka</span>
-                  <span class="tech-pill">PostgreSQL · MySQL</span>
-                  <span class="tech-pill">Laravel · PHP</span>
-                  <span class="tech-pill">Linux · AWS</span>
-                  <span class="tech-pill">Java / Spring</span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
+  <main id="main-content" class="section" tabindex="-1">
+    <div class="wrap">
+      <h1 class="section__title">This page has moved</h1>
+      <p>The profile now lives on one page. Continue to
+        <a href="./index.html#experience">the Experience section</a>.</p>
     </div>
-  </div>
-
-  <footer class="site-footer">
-    <p>
-      &copy; <span id="year">2026</span> Hisham Unniyankal — HTML, CSS &amp; vanilla JS —
-      <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
-    </p>
-  </footer>
-
-  <script src="assets/js/main.js" defer></script>
+  </main>
+  <script>location.replace("./index.html#experience");</script>
 </body>
 </html>

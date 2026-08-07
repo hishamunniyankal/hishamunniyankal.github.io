@@ -1,51 +1,56 @@
-# Where to edit the site
+# Editing this site
 
-Static **GitHub Pages** site: no build step. Edit HTML/CSS/JS, commit, push.
+Static site, no build step: edit files, commit, push to `main`, and the GitHub
+Actions workflow redeploys. Everything visitors see is on `index.html`.
 
-## Why multiple `.html` files?
+## Where things live
 
-Plain GitHub Pages does **not** run server-side includes or templates. Each page is a real file so you can:
+| What | File / location |
+|------|-----------------|
+| All page content | `index.html` (one section per topic) |
+| Colours, fonts, spacing | `assets/css/tokens.css` |
+| Component styles | `assets/css/styles.css` |
+| Mobile menu / reveal / year | `assets/js/main.js` |
+| Favicon | `assets/favicon.svg` |
+| Diagrams | `assets/images/projects/*.svg` |
+| CV | `cv.pdf` |
 
-- Edit **one topic per file** (e.g. only `publications.html` when a new paper ships).
-- Use **normal URLs**: `yoursite.github.io/about.html`, `.../publications.html`.
-- Keep **shared assets** in one place: `assets/css/`, `assets/js/`.
+## Common edits
 
-**Trade-off:** The **top nav** and **sidebar** are repeated on each page. When you add a new page or rename a link, update **every** HTML file that contains the nav (search for `site-nav__links` and `page-toc`). Alternatively, a small static site generator or build step could merge a single template later.
+**Experience:** in `index.html`, find `id="experience"`. Each role is a
+`<li class="entry">` inside a `.timeline` list. There are two tracks
+(`Research & academic`, `Industry & software engineering`). Copy an existing
+`entry` block and edit the role, org, dates (`entry__dates`), context, bullet
+points (`entry__points`), and `entry__tech`.
 
-## File map
+**Publications:** find `id="publications"`. Each paper is a `<li class="pub">`
+with a stable id (`pub-dsn`, `pub-rmlgym`) used by the "publication details"
+links in Selected work. Wrap Hisham's name in `<span class="me">…</span>` so it
+is emphasised consistently. Add DOI/PDF links inside `.pub__links`.
 
-| File | Purpose |
-|------|---------|
-| **`index.html`** | Landing: hero, **What I Do**, **Impact Highlights**, **How I Build Systems**, **Featured Work** cards, welcome blurb, **tiles** linking to other pages. |
-| **`about.html`** | Long-form about + tags. |
-| **`research.html`** | Research themes and cards. |
-| **`engineering.html`** | Industry/product engineering. |
-| **`publications.html`** | Bibliography entries. |
-| **`teaching.html`** | Teaching support. |
-| **`education.html`** | Degrees. |
-| **`contact.html`** | Address, email, profiles. |
-| **`cv.pdf`** | CV (linked from hero on home). |
-| **`assets/images/projects/*.svg`** | Architecture / flow diagrams for Featured Work, Research cards, and Engineering (edit or replace SVGs; keep filenames or update `src` in HTML). |
+**Selected work:** find `id="research"`. Each project is an `<article
+class="work-card">`. Only add a `<figure class="work-card__figure">` with an
+image when the diagram genuinely explains the work (and give it real `alt`
+text). Keep to a small number of strong entries.
 
-## Shared assets (edit once, applies everywhere)
+**Links / CV:** profile links (Scholar, ORCID, GitHub, LinkedIn) appear in the
+hero, the Contact section, and the footer — update all three. The CV link points
+to `cv.pdf` from the nav and hero.
 
-| Path | Role |
-|------|------|
-| `assets/css/tokens.css` | Colours, `--layout-max`, fonts |
-| `assets/css/base.css` | Reset, links, skip link |
-| `assets/css/layout.css` | Nav, grid, sidebar, footer |
-| `assets/css/sections.css` | Hero, cards, publications, home tiles, page headers |
-| `assets/css/animations.css` | Reveals, hero motion |
-| `assets/js/main.js` | Year, mobile nav, scroll reveal, **sidebar active link** for current page |
+**Education:** find `id="background"`. Each degree is a `<li class="edu">`.
 
-## Per-page edits
+## Adding a new section
 
-- **Title / SEO:** each file has its own `<title>` and `<meta name="description">`.
-- **Which nav item is highlighted:** set `aria-current="page"` on the matching `<a>` in **`site-nav__links`** for that page only; remove it from other links on the same page.
+1. Add a `<section class="section" id="new-id" aria-labelledby="new-title">`
+   inside `<main>` with a `<h2 class="section__title" id="new-title">`.
+2. Add a matching `<li><a href="#new-id">…</a></li>` in the `nav__menu`.
+3. Put content in `.wrap` and reuse existing component classes rather than
+   adding page-specific CSS.
 
-## Adding a new page
+## Deployment
 
-1. Copy an existing page (e.g. `about.html`) to `newpage.html`.
-2. Change `<title>`, `description`, main `<h1>`, and body content.
-3. Add a list item in **both** `site-nav__links` and `page-toc` on **every** HTML file (including `index.html` home tiles if you want a card).
-4. Optionally add a **home tile** on `index.html`.
+- Push to `main` → `.github/workflows/deploy-pages.yml` deploys automatically.
+- **One-time GitHub setting:** `Settings → Pages → Build and deployment →
+  Source → GitHub Actions`. Without it the site shows "Site not found".
+- Verify locally with a real HTTP server (not `file://`), e.g.
+  `python -m http.server 8000` then open `http://localhost:8000/`.

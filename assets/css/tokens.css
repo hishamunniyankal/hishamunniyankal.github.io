@@ -1,53 +1,52 @@
-/* Design tokens — researcher + engineer: clarity, structure, technical accents */
+/* Design tokens — restrained navy / off-white / teal system.
+   One primary accent (teal). Colours chosen to meet WCAG 2.2 AA for text. */
 :root {
-  --color-bg: #f4f6f9;
-  --color-bg-elevated: #ffffff;
-  --color-bg-dark: #0c1222;
-  --color-bg-dark-mid: #121a2e;
-  --color-surface: #e8ecf3;
-  --color-border: #c5cdd8;
-  --color-border-subtle: #dfe6ee;
+  /* Surfaces */
+  --bg: #f7f9fb;            /* off-white page */
+  --surface: #ffffff;      /* cards / panels */
+  --surface-alt: #eef2f6;  /* subtle fills */
+  --navy: #0f172a;         /* dark sections, footer */
+  --navy-soft: #1b2536;    /* dark section variant */
 
-  --color-text: #1a2332;
-  --color-text-muted: #5c6b7e;
-  --color-text-on-dark: #e8edf5;
+  /* Text (AA on --bg / --surface) */
+  --text: #16202e;         /* body / headings */
+  --text-muted: #4a5567;   /* secondary text (7:1 on white) */
+  --text-on-dark: #e7edf5; /* text on navy */
+  --text-on-dark-muted: #aeb9c9;
 
-  /* Primary accent — teal; use sparingly for focus, borders, hovers */
-  --color-accent: #0d9488;
-  --color-primary: var(--color-accent);
-  --color-primary-soft: rgba(13, 148, 136, 0.22);
-  --color-primary-faint: rgba(13, 148, 136, 0.08);
-  --color-accent-dim: rgba(13, 148, 136, 0.12);
-  --color-accent-2: #7c3aed;
-  --color-accent-2-dim: rgba(124, 58, 237, 0.1);
+  /* Borders */
+  --border: #dbe2ea;
+  --border-strong: #c3cdd9;
 
-  /* Body links: readable blue, slightly harmonised with primary */
-  --color-link: #1268a8;
-  --color-link-hover: #0b5c8f;
+  /* Accent — teal. --accent-text is dark enough for small text on white. */
+  --accent: #0f766e;        /* links, small text, borders (AA on white) */
+  --accent-strong: #115e59; /* hover / active */
+  --accent-on-dark: #2dd4bf;/* accent on navy backgrounds */
+  --accent-faint: #e6f2f0;  /* tint fills */
 
-  --font-sans: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", "Consolas", "Courier New", monospace;
+  /* Focus ring */
+  --focus: #0e7490;
 
-  --font-weight-body: 400;
-  --font-weight-em: 600;
-  --font-weight-heading: 700;
+  /* Type */
+  --font-sans: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Consolas", monospace;
 
+  /* Radii */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
 
-  --shadow-sm: 0 1px 2px rgba(12, 18, 34, 0.06);
-  --shadow-md: 0 8px 24px rgba(12, 18, 34, 0.1);
+  /* Shadows (used sparingly) */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.08);
 
-  --space-section: clamp(3.5rem, 7vw, 6rem);
-  /* Horizontal inset inside page header + bordered section cards */
-  --section-pad-inline: clamp(1.25rem, 3.2vw, 2rem);
-  --layout-max: min(92vw, 1420px);
-  --layout-pad-x: clamp(1.25rem, 4vw, 3rem);
-  --sidebar-width: 200px;
-  --nav-h: 56px;
+  /* Layout */
+  --measure: 68ch;             /* comfortable body line length */
+  --layout-max: 1080px;        /* overall content width */
+  --layout-pad-x: clamp(1.1rem, 4vw, 2.5rem);
+  --nav-h: 60px;
+  --space-section: clamp(3rem, 6vw, 5rem);
 
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --dur-fast: 0.2s;
-  --dur-med: 0.45s;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.2s;
 }

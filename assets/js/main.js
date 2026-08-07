@@ -1,81 +1,103 @@
+/* Minimal progressive enhancement:
+   1. Mark that JS is available (enables the collapsible mobile menu + reveals).
+   2. Accessible mobile menu: toggle, aria-expanded, Escape to close, close on
+      link click and on resize to desktop.
+   3. Scroll reveal (skipped when the user prefers reduced motion).
+   4. Current year in the footer.
+   All content is fully usable if this script never runs. */
 (function () {
   "use strict";
 
+  var root = document.documentElement;
+  root.classList.add("js");
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion) {
+    root.classList.add("js-reveal");
+  }
+
+  /* ---- Mobile menu ---- */
+  var toggle = document.getElementById("nav-toggle");
+  var menu = document.getElementById("nav-menu");
+  var mq = window.matchMedia("(max-width: 820px)");
+
+  function isMobile() {
+    return mq.matches;
+  }
+
+  function closeMenu() {
+    if (!toggle || !menu) return;
+    if (isMobile()) menu.hidden = true;
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  function openMenu() {
+    if (!menu || !toggle) return;
+    menu.hidden = false;
+    toggle.setAttribute("aria-expanded", "true");
+  }
+
+  function syncMenuForViewport() {
+    if (!menu) return;
+    // On desktop the menu is always visible; on mobile it starts collapsed.
+    menu.hidden = isMobile();
+    if (toggle) toggle.setAttribute("aria-expanded", "false");
+  }
+
+  if (toggle && menu) {
+    syncMenuForViewport();
+
+    toggle.addEventListener("click", function () {
+      if (menu.hidden) {
+        openMenu();
+      } else {
+        closeMenu();
+      }
+    });
+
+    menu.addEventListener("click", function (e) {
+      if (e.target.closest("a") && isMobile()) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && isMobile() && !menu.hidden) {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+
+    // Keep state consistent when crossing the breakpoint.
+    if (mq.addEventListener) {
+      mq.addEventListener("change", syncMenuForViewport);
+    } else if (mq.addListener) {
+      mq.addListener(syncMenuForViewport);
+    }
+  }
+
+  /* ---- Scroll reveal ---- */
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    var revealEls = document.querySelectorAll(".reveal");
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 }
+    );
+    revealEls.forEach(function (el) {
+      io.observe(el);
+    });
+  }
+
+  /* ---- Footer year ---- */
   var yearEl = document.getElementById("year");
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
-
-  /* Mobile navigation */
-  var nav = document.querySelector(".site-nav");
-  var toggle = document.querySelector(".site-nav__toggle");
-  if (nav && toggle) {
-    toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    nav.querySelectorAll(".site-nav__links a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  /* Scroll reveal */
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!reduceMotion) {
-    var revealEls = document.querySelectorAll(".reveal");
-    if (revealEls.length && "IntersectionObserver" in window) {
-      var io = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              io.unobserve(entry.target);
-            }
-          });
-        },
-        { root: null, rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
-      );
-      revealEls.forEach(function (el) {
-        io.observe(el);
-      });
-      function revealInView() {
-        revealEls.forEach(function (el) {
-          if (el.classList.contains("is-visible")) return;
-          var r = el.getBoundingClientRect();
-          if (r.top < window.innerHeight * 0.92 && r.bottom > 0) {
-            el.classList.add("is-visible");
-            io.unobserve(el);
-          }
-        });
-      }
-      requestAnimationFrame(revealInView);
-    } else {
-      revealEls.forEach(function (el) {
-        el.classList.add("is-visible");
-      });
-    }
-  } else {
-    document.querySelectorAll(".reveal").forEach(function (el) {
-      el.classList.add("is-visible");
-    });
-  }
-
-  /* Sidebar: highlight link to current HTML page */
-  var path = window.location.pathname || "";
-  var segments = path.split("/").filter(function (s) {
-    return s.length > 0;
-  });
-  var file = segments.length ? segments[segments.length - 1] : "";
-  if (!file || file === "") file = "index.html";
-  document.querySelectorAll(".page-toc a[href]").forEach(function (a) {
-    var href = a.getAttribute("href") || "";
-    if (href.indexOf("#") === 0) return;
-    var target = href.split("/").pop();
-    if (target === file) {
-      a.classList.add("is-active");
-    }
-  });
 })();
