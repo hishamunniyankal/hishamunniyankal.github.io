@@ -8,7 +8,7 @@ of Genoa) and software engineer. Static HTML/CSS/JavaScript, deployed to
 
 - `index.html` — the whole profile on one page with anchored sections:
   Hero → Profile → Experience → Selected work (`#research`) → Publications →
-  Education (`#background`) → Contact.
+  Education (`#education`) → Contact.
 - `about.html`, `research.html`, `engineering.html`, `publications.html`,
   `teaching.html`, `education.html`, `contact.html` — lightweight redirect stubs
   to the matching `index.html` anchor (kept so previously shared links still

@@ -37,7 +37,7 @@ text). Keep to a small number of strong entries.
 hero, the Contact section, and the footer — update all three. The CV link points
 to `cv.pdf` from the nav and hero.
 
-**Education:** find `id="background"`. Each degree is a `<li class="edu">`.
+**Education:** find `id="education"`. Each degree is a `<li class="edu">`.
 
 ## Adding a new section
 

@@ -481,6 +481,22 @@ a:hover {
   gap: 1.25rem;
 }
 
+.work-more {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.work-more a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.work-more a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .work-card {
   display: flex;
   flex-direction: column;

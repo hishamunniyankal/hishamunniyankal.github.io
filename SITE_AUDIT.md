@@ -186,11 +186,11 @@ Section order:
 3. Experience (`#experience`) — two tracks: research/academic and industry.
 4. Selected work (`#research`) — up to four project cards.
 5. Publications (`#publications`) — two papers with correct authors + DOI/PDF.
-6. Background (`#background`) — education (teaching lives in Experience).
+6. Education (`#education`) — degrees (teaching lives in Experience).
 7. Contact (`#contact`) — institutional email first, profiles, no phone.
 
-Compact primary nav: Profile · Experience · Research · Publications · Contact ·
-**CV** (distinct action).
+Compact primary nav: Profile · Experience · Selected Work · Publications ·
+Education · Contact · **CV** (distinct action).
 
 Old pages become redirect stubs (meta refresh + canonical + `noindex` + JS +
 visible fallback link):
@@ -199,8 +199,8 @@ visible fallback link):
 - `engineering.html` → `/#experience`
 - `research.html` → `/#research`
 - `publications.html` → `/#publications`
-- `teaching.html` → `/#background`
-- `education.html` → `/#background`
+- `teaching.html` → `/#experience`
+- `education.html` → `/#education`
 - `contact.html` → `/#contact`
 
 ## 14. Keep / merge / rewrite / remove table
@@ -222,7 +222,7 @@ visible fallback link):
 | engineering.html systems | Rewrite | `#experience` industry track |
 | publications.html | Rewrite | `#publications` (correct authors/year/venue) |
 | teaching.html | Merge | `#experience` research track (single entry) |
-| education.html | Merge | `#background` (no emoji, grades de-emphasised) |
+| education.html | Merge | `#education` (no emoji, grades de-emphasised) |
 | contact.html | Rewrite | `#contact` (institutional email, no phone) |
 | jekyll-gh-pages.yml | Replace | static upload/deploy Pages workflow |
 | Emoji favicon | Replace | `assets/favicon.svg` monogram |
