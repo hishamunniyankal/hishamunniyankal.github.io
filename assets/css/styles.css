@@ -196,8 +196,8 @@ a:hover {
 
 .nav__menu a {
   display: inline-block;
-  padding: 0.5rem 0.7rem;
-  font-size: 0.9rem;
+  padding: 0.5rem 0.55rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-on-dark-muted);
   text-decoration: none;
@@ -477,8 +477,9 @@ a:hover {
 /* ---- Selected work ---- */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1.25rem;
+  align-items: stretch;
 }
 
 .work-more {
@@ -504,6 +505,17 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   overflow: hidden;
+  height: 100%;
+}
+
+.work-card--primary {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  box-shadow: var(--shadow-sm);
+}
+
+.work-card--primary .work-card__kind {
+  background: var(--accent);
+  color: #fff;
 }
 
 .work-card__figure {
