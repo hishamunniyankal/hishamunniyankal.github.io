@@ -15,6 +15,11 @@ Actions workflow redeploys. Everything visitors see is on `index.html`.
 | Diagrams | `assets/images/projects/*.svg` |
 | CV | `cv.pdf` |
 
+## Section order
+
+Hero → Research Profile (`#profile`) → Featured AI & Research Work
+(`#research`) → Publications → Experience → Education → Contact.
+
 ## Common edits
 
 **Experience:** in `index.html`, find `id="experience"`. Each role is a
@@ -25,17 +30,21 @@ points (`entry__points`), and `entry__tech`.
 
 **Publications:** find `id="publications"`. Each paper is a `<li class="pub">`
 with a stable id (`pub-dsn`, `pub-rmlgym`) used by the "publication details"
-links in Selected work. Wrap Hisham's name in `<span class="me">…</span>` so it
-is emphasised consistently. Add DOI/PDF links inside `.pub__links`.
+links in Featured AI & Research Work. Wrap Hisham's name in
+`<span class="me">…</span>` so it is emphasised consistently. Add DOI/PDF
+links inside `.pub__links`.
 
-**Selected work:** find `id="research"`. Each project is an `<article
-class="work-card">`. Only add a `<figure class="work-card__figure">` with an
-image when the diagram genuinely explains the work (and give it real `alt`
-text). Keep to a small number of strong entries.
+**Featured AI & Research Work:** find `id="research"`. Keep a small set of
+strong entries. RMLGym uses `work-card--featured` (full-width lead). The
+image-classification project may use `work-card--emphasis` as a secondary
+highlight. Other projects use plain `work-card`. Only add a
+`<figure class="work-card__figure">` when a diagram genuinely explains the
+work (with real `alt` text).
 
-**Links / CV:** profile links (Scholar, ORCID, GitHub, LinkedIn) appear in the
-hero, the Contact section, and the footer — update all three. The CV link points
-to `cv.pdf` from the nav and hero.
+**Links / CV:** Scholar, ORCID, GitHub and LinkedIn appear in the hero. Contact
+keeps emails, affiliation, and a short LinkedIn/GitHub list. The footer has
+copyright, email, and Back to top. The CV link points to `cv.pdf` from the nav
+and hero ("View CV").
 
 **Education:** find `id="education"`. Each degree is a `<li class="edu">`.
 

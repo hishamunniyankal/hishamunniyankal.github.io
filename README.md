@@ -1,14 +1,15 @@
 # hishamunniyankal.github.io
 
-Personal profile site for **Hisham Unniyankal** — doctoral researcher (University
-of Genoa) and software engineer. Static HTML/CSS/JavaScript, deployed to
+Personal profile site for **Hisham Unniyankal** — computer science researcher
+with academic AI/ML experience, formal-reasoning expertise, and production
+software/data-engineering background. Static HTML/CSS/JavaScript, deployed to
 **GitHub Pages** via GitHub Actions. No build step, no framework.
 
 ## Structure
 
 - `index.html` — the whole profile on one page with anchored sections:
-  Hero → Profile → Experience → Selected work (`#research`) → Publications →
-  Education (`#education`) → Contact.
+  Hero → Research Profile → Featured AI & Research Work (`#research`) →
+  Publications → Experience → Education (`#education`) → Contact.
 - `about.html`, `research.html`, `engineering.html`, `publications.html`,
   `teaching.html`, `education.html`, `contact.html` — lightweight redirect stubs
   to the matching `index.html` anchor (kept so previously shared links still

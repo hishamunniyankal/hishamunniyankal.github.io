@@ -19,7 +19,7 @@
   /* ---- Mobile menu ---- */
   var toggle = document.getElementById("nav-toggle");
   var menu = document.getElementById("nav-menu");
-  var mq = window.matchMedia("(max-width: 820px)");
+  var mq = window.matchMedia("(max-width: 960px)");
 
   function isMobile() {
     return mq.matches;
