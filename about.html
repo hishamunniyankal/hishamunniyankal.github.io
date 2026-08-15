@@ -3,21 +3,195 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirecting &mdash; Hisham Unniyankal</title>
-  <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://hishamunniyankal.github.io/#profile" />
-  <meta http-equiv="refresh" content="0; url=./index.html#profile" />
+  <title>About | Hisham Unniyankal</title>
+  <meta name="description" content="Biography, education, professional profiles and contact information for Hisham Unniyankal, doctoral researcher at the University of Genoa." />
+  <link rel="canonical" href="https://hishamunniyankal.github.io/about.html" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="About | Hisham Unniyankal" />
+  <meta property="og:description" content="Biography, education, profiles and contact for a computer science researcher focused on AI/ML and research engineering." />
+  <meta property="og:url" content="https://hishamunniyankal.github.io/about.html" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="About | Hisham Unniyankal" />
+  <meta name="twitter:description" content="Biography, education, profiles and contact for a computer science researcher focused on AI/ML and research engineering." />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <main id="main-content" class="section" tabindex="-1">
-    <div class="wrap">
-      <h1 class="section__title">This page has moved</h1>
-      <p>The profile now lives on one page. Continue to
-        <a href="./index.html#profile">the Profile section</a>.</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="index.html">Hisham <b>Unniyankal</b></a>
+      <button type="button" class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="visually-hidden">Menu</span>
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a class="nav__cv" href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+    <header class="page-header" id="top">
+      <div class="wrap">
+        <h1>About</h1>
+        <p class="page-header__intro">
+          Biography, education, professional profiles and contact information.
+        </p>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="bio-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="bio-title">Biography</h2>
+        <div class="prose reveal">
+          <p>
+            I am a doctoral researcher in computer science with an MSc
+            specialization in Data Science and AI. My academic AI work includes
+            reinforcement learning, computer vision, explainable classification,
+            speech processing, and natural language processing. My current
+            doctoral research in runtime verification has strengthened my
+            experience in formal reasoning, research-software development,
+            experimentation, and system evaluation.
+          </p>
+          <p>
+            Before beginning the PhD, I worked on production software and
+            large-scale security-data systems. This engineering background
+            supports my ability to turn research ideas into implementable,
+            testable and maintainable systems.
+          </p>
+          <p>
+            I am interested in academic and industrial AI research, AI research
+            engineering, and applied machine-learning opportunities. Detailed
+            project descriptions are on the <a href="research.html">Research</a>
+            page; roles and employment history are on
+            <a href="experience.html">Experience</a>.
+          </p>
+        </div>
+
+        <ul class="capabilities reveal" aria-label="Focus areas">
+          <li class="capability">
+            <h3>Applied AI &amp; Machine Learning</h3>
+            <ul class="capability__tags">
+              <li>Reinforcement learning</li>
+              <li>Reward shaping</li>
+              <li>Computer vision</li>
+              <li>Explainable classification</li>
+              <li>Speech/audio classification</li>
+              <li>Natural language processing</li>
+            </ul>
+          </li>
+          <li class="capability">
+            <h3>Research &amp; Experimental Systems</h3>
+            <ul class="capability__tags">
+              <li>Experimental evaluation</li>
+              <li>Research prototyping</li>
+              <li>Reproducible research software</li>
+              <li>Formal specifications</li>
+              <li>Runtime verification</li>
+            </ul>
+          </li>
+          <li class="capability">
+            <h3>Software &amp; Data Engineering</h3>
+            <ul class="capability__tags">
+              <li>Python</li>
+              <li>PyTorch / TensorFlow / scikit-learn</li>
+              <li>Apache Spark / Kafka</li>
+              <li>FastAPI</li>
+              <li>SQL data systems</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="education-title">Education</h2>
+        <ul class="edu-list reveal">
+          <li class="edu">
+            <span class="edu__degree">PhD in Computer Science</span>
+            <span class="edu__inst">University of Genoa, Genoa, Italy</span>
+            <span class="edu__status">Ongoing</span>
+            <span class="edu__dates">Nov 2023 &ndash; present</span>
+          </li>
+          <li class="edu">
+            <span class="edu__degree">M.Sc. in Computer Science (Data Science &amp; AI)</span>
+            <span class="edu__inst">University of Genoa, Genoa, Italy</span>
+            <span class="edu__dates">2020 &ndash; 2023</span>
+          </li>
+          <li class="edu">
+            <span class="edu__degree">Master of Computer Applications (MCA)</span>
+            <span class="edu__inst">Anna University, Coimbatore, India</span>
+            <span class="edu__dates">2014 &ndash; 2016</span>
+          </li>
+          <li class="edu">
+            <span class="edu__degree">Bachelor of Computer Applications (BCA)</span>
+            <span class="edu__inst">University of Calicut, Malappuram, India</span>
+            <span class="edu__dates">2011 &ndash; 2014</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="contact-title">Contact &amp; profiles</h2>
+        <p class="section__intro reveal">Open to AI research, AI research-engineering and applied machine-learning opportunities.</p>
+        <div class="contact-grid reveal">
+          <div class="contact-card">
+            <h3>Email</h3>
+            <address>
+              <a href="mailto:hisham.unniyankal@edu.unige.it">hisham.unniyankal@edu.unige.it</a><br />
+              <a href="mailto:uaj.hisham@gmail.com">uaj.hisham@gmail.com</a>
+            </address>
+          </div>
+          <div class="contact-card">
+            <h3>Affiliation</h3>
+            <address>
+              DIBRIS, University of Genoa<br />
+              Genoa, Italy
+            </address>
+          </div>
+          <div class="contact-card">
+            <h3>Profiles</h3>
+            <ul class="link-list">
+              <li><a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a></li>
+              <li><a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <script>location.replace("./index.html#profile");</script>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>&copy; <span id="year">2026</span> Hisham Unniyankal</p>
+      <ul class="footer__links">
+        <li><a href="mailto:hisham.unniyankal@edu.unige.it">Email</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

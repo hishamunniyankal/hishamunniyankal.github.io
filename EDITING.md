@@ -1,60 +1,64 @@
 # Editing this site
 
 Static site, no build step: edit files, commit, push to `main`, and the GitHub
-Actions workflow redeploys. Everything visitors see is on `index.html`.
+Actions workflow redeploys.
 
 ## Where things live
 
 | What | File / location |
 |------|-----------------|
-| All page content | `index.html` (one section per topic) |
+| Home / overview | `index.html` |
+| Research & projects | `research.html` |
+| Publications | `publications.html` |
+| Experience timelines | `experience.html` |
+| Biography, education, contact | `about.html` |
 | Colours, fonts, spacing | `assets/css/tokens.css` |
-| Component styles | `assets/css/styles.css` |
+| Shared component styles | `assets/css/styles.css` |
 | Mobile menu / reveal / year | `assets/js/main.js` |
-| Favicon | `assets/favicon.svg` |
-| Diagrams | `assets/images/projects/*.svg` |
 | CV | `cv.pdf` |
 
-## Section order
+## Navigation
 
-Hero → Research Profile (`#profile`) → Featured AI & Research Work
-(`#research`) → Publications → Experience → Education → Contact.
+All five content pages share the same primary nav:
+
+Home · Research · Publications · Experience · About · CV
+
+Mark the current page with `aria-current="page"` on the matching nav link.
+Do not add Teaching, Education, Engineering or Contact as top-level nav items.
 
 ## Common edits
 
-**Experience:** in `index.html`, find `id="experience"`. Each role is a
-`<li class="entry">` inside a `.timeline` list. There are two tracks
-(`Research & academic`, `Industry & software engineering`). Copy an existing
-`entry` block and edit the role, org, dates (`entry__dates`), context, bullet
-points (`entry__points`), and `entry__tech`.
+**Home previews:** keep `index.html` short. Link out to the dedicated pages
+instead of duplicating full sections.
 
-**Publications:** find `id="publications"`. Each paper is a `<li class="pub">`
-with a stable id (`pub-dsn`, `pub-rmlgym`) used by the "publication details"
-links in Featured AI & Research Work. Wrap Hisham's name in
-`<span class="me">…</span>` so it is emphasised consistently. Add DOI/PDF
-links inside `.pub__links`.
+**Research projects:** in `research.html`, each project is an
+`<article class="work-card">`. RMLGym uses `work-card--featured`. Stable ids
+(`rmlgym`, `cifake`, `plc-rv`, `sigma2rml`) support deep links from the home page.
 
-**Featured AI & Research Work:** find `id="research"`. Keep a small set of
-strong entries. RMLGym uses `work-card--featured` (full-width lead). The
-image-classification project may use `work-card--emphasis` as a secondary
-highlight. Other projects use plain `work-card`. Only add a
-`<figure class="work-card__figure">` when a diagram genuinely explains the
-work (with real `alt` text).
+**Publications:** in `publications.html`, each paper is a `<li class="pub">`
+with a stable id (`pub-dsn`, `pub-rmlgym`). Wrap Hisham's name in
+`<span class="me">…</span>`.
 
-**Links / CV:** Scholar, ORCID, GitHub and LinkedIn appear in the hero. Contact
-keeps emails, affiliation, and a short LinkedIn/GitHub list. The footer has
-copyright, email, and Back to top. The CV link points to `cv.pdf` from the nav
-and hero ("View CV").
+**Experience:** in `experience.html`, roles are `<li class="entry">` items inside
+`.timeline` lists. Tracks use `#academic`, `#industry`; teaching uses
+`#teaching` on its entry.
 
-**Education:** find `id="education"`. Each degree is a `<li class="edu">`.
+**About:** biography and capability groups, then `#education` and `#contact`.
 
-## Adding a new section
+**Redirect stubs:** `engineering.html` → `experience.html#industry`,
+`teaching.html` → `experience.html#teaching`, `education.html` →
+`about.html#education`, `contact.html` → `about.html#contact`. Keep them
+`noindex` so they do not create duplicate search results.
 
-1. Add a `<section class="section" id="new-id" aria-labelledby="new-title">`
-   inside `<main>` with a `<h2 class="section__title" id="new-title">`.
-2. Add a matching `<li><a href="#new-id">…</a></li>` in the `nav__menu`.
-3. Put content in `.wrap` and reuse existing component classes rather than
-   adding page-specific CSS.
+**Sitemap:** update `sitemap.xml` when adding a new *canonical* content page.
+Do not list redirect-only URLs.
+
+## Adding a new content page
+
+1. Create a real HTML file with unique title, description, canonical and OG tags.
+2. Copy the shared nav; set `aria-current="page"` on the new item.
+3. Use `.page-header` (light) for the page H1 — reserve `.hero` for the homepage.
+4. Add the URL to `sitemap.xml` and link it from the nav on every content page.
 
 ## Deployment
 

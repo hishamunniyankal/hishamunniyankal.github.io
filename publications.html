@@ -3,21 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirecting &mdash; Hisham Unniyankal</title>
-  <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://hishamunniyankal.github.io/#publications" />
-  <meta http-equiv="refresh" content="0; url=./index.html#publications" />
+  <title>Publications | Hisham Unniyankal</title>
+  <meta name="description" content="Peer-reviewed publications by Hisham Unniyankal on runtime verification and reinforcement learning, with links to Google Scholar and ORCID." />
+  <link rel="canonical" href="https://hishamunniyankal.github.io/publications.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Publications | Hisham Unniyankal" />
+  <meta property="og:description" content="Peer-reviewed publications on runtime verification and reinforcement learning, with Scholar and ORCID links." />
+  <meta property="og:url" content="https://hishamunniyankal.github.io/publications.html" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Publications | Hisham Unniyankal" />
+  <meta name="twitter:description" content="Peer-reviewed publications on runtime verification and reinforcement learning, with Scholar and ORCID links." />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <main id="main-content" class="section" tabindex="-1">
-    <div class="wrap">
-      <h1 class="section__title">This page has moved</h1>
-      <p>The profile now lives on one page. Continue to
-        <a href="./index.html#publications">the Publications section</a>.</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="index.html">Hisham <b>Unniyankal</b></a>
+      <button type="button" class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="visually-hidden">Menu</span>
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html" aria-current="page">Publications</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="nav__cv" href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+    <header class="page-header" id="top">
+      <div class="wrap">
+        <h1>Publications</h1>
+        <p class="page-header__intro">
+          Selected peer-reviewed work. A fuller list is available on
+          <a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          and <a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a>.
+        </p>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="pub-list-title">
+      <div class="wrap">
+        <h2 class="visually-hidden" id="pub-list-title">Peer-reviewed publications</h2>
+        <ul class="pub-list reveal">
+          <li class="pub" id="pub-dsn">
+            <span class="pub__year">2025</span>
+            <div>
+              <p class="pub__title">Runtime Verification of Program Organization Units in Safe Programmable Logic Controller Systems</p>
+              <p class="pub__authors"><span class="me">Hisham Unniyankal</span>, Davide Ancona, Angelo Ferrando, Fabio Parodi, Alessandro Alessi, Federico Bottino</p>
+              <p class="pub__venue">Industry Track, IEEE/IFIP International Conference on Dependable Systems and Networks (DSN) 2025</p>
+              <p class="pub__links">
+                <a class="pub__badge" href="https://doi.org/10.1109/DSN-S65789.2025.00050" target="_blank" rel="noopener">DOI: 10.1109/DSN-S65789.2025.00050</a>
+                <a class="pub__badge" href="research.html#plc-rv">Related research</a>
+              </p>
+            </div>
+          </li>
+          <li class="pub" id="pub-rmlgym">
+            <span class="pub__year">2023</span>
+            <div>
+              <p class="pub__title">RMLGym: a Formal Reward Machine Framework for Reinforcement Learning</p>
+              <p class="pub__authors"><span class="me">Hisham Unniyankal</span>, Francesco Belardinelli, Angelo Ferrando, Vadim Malvone</p>
+              <p class="pub__venue">CEUR Workshop Proceedings, Vol. 3579</p>
+              <p class="pub__links">
+                <a class="pub__badge" href="https://ceur-ws.org/Vol-3579/paper1.pdf" target="_blank" rel="noopener">PDF</a>
+                <a class="pub__badge" href="research.html#rmlgym">Related research</a>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
-  <script>location.replace("./index.html#publications");</script>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>&copy; <span id="year">2026</span> Hisham Unniyankal</p>
+      <ul class="footer__links">
+        <li><a href="mailto:hisham.unniyankal@edu.unige.it">Email</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

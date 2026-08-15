@@ -7,27 +7,31 @@ software/data-engineering background. Static HTML/CSS/JavaScript, deployed to
 
 ## Structure
 
-- `index.html` — the whole profile on one page with anchored sections:
-  Hero → Research Profile → Featured AI & Research Work (`#research`) →
-  Publications → Experience → Education (`#education`) → Contact.
-- `about.html`, `research.html`, `engineering.html`, `publications.html`,
-  `teaching.html`, `education.html`, `contact.html` — lightweight redirect stubs
-  to the matching `index.html` anchor (kept so previously shared links still
-  work; `noindex` so they don't create duplicate search results).
+Hybrid multi-page site (concise homepage + substantive section pages):
+
+- `index.html` — home / overview (hero, themes, research & publication previews,
+  experience summary, contact).
+- `research.html` — doctoral research and selected AI/ML & research-software work.
+- `publications.html` — peer-reviewed publications and scholarly profile links.
+- `experience.html` — academic/research and industry/software experience
+  (`#academic`, `#industry`, `#teaching`).
+- `about.html` — biography, education (`#education`), profiles and contact
+  (`#contact`).
+- `engineering.html`, `teaching.html`, `education.html`, `contact.html` —
+  redirect stubs to the matching page/anchor (`noindex`).
 - `404.html` — custom not-found page.
 - `assets/css/tokens.css` — design tokens (colours, type, spacing).
-- `assets/css/styles.css` — all component styles.
+- `assets/css/styles.css` — shared component styles.
 - `assets/js/main.js` — mobile menu, scroll reveal, footer year (progressive
   enhancement; the site works without it).
-- `assets/favicon.svg` — favicon.
-- `assets/images/projects/*.svg` — diagrams (only `rv-pou-monitoring.svg` is
-  used on the page today; the others are kept as reusable assets).
 - `cv.pdf` — CV, linked from the nav and hero.
-- `robots.txt`, `sitemap.xml` — SEO.
+- `robots.txt`, `sitemap.xml` — SEO (canonical pages only; redirects omitted).
 - `.github/workflows/deploy-pages.yml` — deployment workflow.
 - `.nojekyll` — tells Pages to serve files as-is (no Jekyll build).
 
 See **[EDITING.md](./EDITING.md)** for how to update content and deploy.
+
+Primary navigation: **Home · Research · Publications · Experience · About · CV**
 
 ## Deployment
 

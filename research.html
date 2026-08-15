@@ -3,21 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirecting &mdash; Hisham Unniyankal</title>
-  <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://hishamunniyankal.github.io/#research" />
-  <meta http-equiv="refresh" content="0; url=./index.html#research" />
+  <title>Research | Hisham Unniyankal</title>
+  <meta name="description" content="Doctoral research in runtime verification, academic AI/ML projects including RMLGym and computer vision, and research software such as Sigma2RML." />
+  <link rel="canonical" href="https://hishamunniyankal.github.io/research.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Research | Hisham Unniyankal" />
+  <meta property="og:description" content="Doctoral research, academic AI/ML projects, and research software spanning formal methods and experimental systems." />
+  <meta property="og:url" content="https://hishamunniyankal.github.io/research.html" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Research | Hisham Unniyankal" />
+  <meta name="twitter:description" content="Doctoral research, academic AI/ML projects, and research software spanning formal methods and experimental systems." />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <main id="main-content" class="section" tabindex="-1">
-    <div class="wrap">
-      <h1 class="section__title">This page has moved</h1>
-      <p>The profile now lives on one page. Continue to
-        <a href="./index.html#research">Selected work</a>.</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="index.html">Hisham <b>Unniyankal</b></a>
+      <button type="button" class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="visually-hidden">Menu</span>
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" aria-current="page">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="nav__cv" href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+    <header class="page-header" id="top">
+      <div class="wrap">
+        <h1>Research</h1>
+        <p class="page-header__intro">
+          Current doctoral research plus selected academic AI/ML work and
+          research software. Full publication details are on the
+          <a href="publications.html">Publications</a> page.
+        </p>
+      </div>
+    </header>
+
+    <section class="section" id="doctoral" aria-labelledby="doctoral-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="doctoral-title">Doctoral research</h2>
+        <div class="prose reveal">
+          <p>
+            My doctoral research develops runtime-verification techniques for
+            programmable logic controller (PLC) program organisation units and
+            evaluates them in controller-oriented settings. The work emphasises
+            formal specifications, research-software development, experimental
+            evaluation of monitor behaviour and overhead, and practical
+            integration constraints.
+          </p>
+          <p>
+            This line of research strengthens experience in formal reasoning and
+            experimental systems. It is presented here as research methodology
+            and software evidence, not as an intended career in industrial
+            automation. Results from this work appear in the Industry Track of
+            IEEE/IFIP DSN 2025.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="applied-ai" aria-labelledby="applied-ai-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="applied-ai-title">Academic AI &amp; machine learning</h2>
+        <p class="section__intro reveal">
+          Selected projects spanning reinforcement learning, computer vision and
+          research tooling that connects formal specifications with learning systems.
+        </p>
+
+        <div class="work-grid reveal">
+          <article class="work-card work-card--featured" id="rmlgym">
+            <div class="work-card__body">
+              <span class="work-card__kind">AI Research · Reinforcement Learning · Published</span>
+              <h3 class="work-card__title">RMLGym</h3>
+              <p>
+                RMLGym integrates Runtime Monitoring Language specifications into
+                reinforcement-learning environments, enabling explicit,
+                property-based reward shaping. The project combines formal
+                specifications, configurable monitoring and experimental RL
+                environments, and resulted in a peer-reviewed publication.
+              </p>
+              <div class="pub__links work-card__meta">
+                <a class="pub__badge" href="https://github.com/hishamunniyankal/rml-gym" target="_blank" rel="noopener">GitHub</a>
+                <a class="pub__badge" href="publications.html#pub-rmlgym">Publication</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card work-card--emphasis" id="cifake">
+            <div class="work-card__body">
+              <span class="work-card__kind">Academic AI · Computer Vision</span>
+              <h3 class="work-card__title">Detecting AI-Generated vs Real Images</h3>
+              <p>
+                Compared multiple CNN architectures for classifying authentic and
+                AI-generated images on the 120,000-image CIFAKE dataset. The best
+                evaluated AlexNet configuration achieved 93.4% accuracy;
+                Grad-CAM was used to inspect model attention.
+              </p>
+              <div class="pub__links work-card__meta">
+                <a class="pub__badge" href="https://github.com/hishamunniyankal/Real-or-fake-Detecting-AI-Generated-vs.-Real-Images" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card" id="plc-rv">
+            <div class="work-card__body">
+              <span class="work-card__kind">Doctoral Research · Formal Methods · Published</span>
+              <h3 class="work-card__title">Runtime Verification for PLC Systems</h3>
+              <p>
+                Doctoral research developing runtime-verification techniques for
+                PLC program organisation units and evaluating them in
+                controller-oriented settings. Evidence of research methodology,
+                research software and experimental system evaluation. Published
+                in the Industry Track of IEEE/IFIP DSN 2025.
+              </p>
+              <div class="pub__links work-card__meta">
+                <a class="pub__badge" href="publications.html#pub-dsn">Publication</a>
+                <a class="pub__badge" href="https://doi.org/10.1109/DSN-S65789.2025.00050" target="_blank" rel="noopener">DOI</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card" id="sigma2rml">
+            <div class="work-card__body">
+              <span class="work-card__kind">Research Software · Security Specifications</span>
+              <h3 class="work-card__title">Sigma2RML</h3>
+              <p>
+                Research software that translates Sigma security detection rules
+                into Runtime Monitoring Language specifications. Includes a
+                parser and modular translation engine with support for temporal
+                conditions, a FastAPI backend, a Next.js/TypeScript frontend, and
+                tests.
+              </p>
+              <div class="pub__links work-card__meta">
+                <a class="pub__badge" href="https://github.com/hishamunniyankal/sigma2rml" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="work-more">
+          <a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">More projects on GitHub →</a>
+        </p>
+      </div>
+    </section>
   </main>
-  <script>location.replace("./index.html#research");</script>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>&copy; <span id="year">2026</span> Hisham Unniyankal</p>
+      <ul class="footer__links">
+        <li><a href="mailto:hisham.unniyankal@edu.unige.it">Email</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
