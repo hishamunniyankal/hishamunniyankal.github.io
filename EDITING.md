@@ -43,7 +43,9 @@ with a stable id (`pub-dsn`, `pub-rmlgym`). Wrap Hisham's name in
 `.timeline` lists. Tracks use `#academic`, `#industry`; teaching uses
 `#teaching` on its entry.
 
-**About:** biography and capability groups, then `#education` and `#contact`.
+**About:** biography (first person), three lean capability groups (Research,
+Applied AI, Engineering), then `#education` and `#contact`. Avoid keyword
+laundry lists and claims of broad formal-methods expertise.
 
 **Redirect stubs:** `engineering.html` → `experience.html#industry`,
 `teaching.html` → `experience.html#teaching`, `education.html` →

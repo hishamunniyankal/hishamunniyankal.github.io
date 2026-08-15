@@ -1,8 +1,9 @@
 # hishamunniyankal.github.io
 
-Personal profile site for **Hisham Unniyankal** — computer science researcher
-with academic AI/ML experience, formal-reasoning expertise, and production
-software/data-engineering background. Static HTML/CSS/JavaScript, deployed to
+Personal profile site for **Hisham Unniyankal** — doctoral researcher in
+Computer Science at the University of Genoa. Work spans runtime verification
+and research software, academic applied machine learning, and production
+software/data engineering. Static HTML/CSS/JavaScript, deployed to
 **GitHub Pages** via GitHub Actions. No build step, no framework.
 
 ## Structure
