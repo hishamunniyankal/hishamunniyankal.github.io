@@ -15,58 +15,84 @@ Actions workflow redeploys.
 | Colours, fonts, spacing | `assets/css/tokens.css` |
 | Shared component styles | `assets/css/styles.css` |
 | Mobile menu / reveal / year | `assets/js/main.js` |
+| Profile icons (SVG) | `assets/icons/` |
 | CV | `cv.pdf` |
 
 ## Navigation
 
-All five content pages share the same primary nav:
+All five content pages share the same primary nav and order:
 
 Home · Research · Publications · Experience · About · CV
 
-Mark the current page with `aria-current="page"` on the matching nav link.
-Do not add Teaching, Education, Engineering or Contact as top-level nav items.
+When changing navigation:
 
-## Common edits
+1. Update the `nav__menu` list on **every** content page (`index.html`,
+   `research.html`, `publications.html`, `experience.html`, `about.html`).
+2. Set `aria-current="page"` only on the active item for that page.
+3. Do not add Teaching, Education, Engineering or Contact as top-level items.
 
-**Home previews:** keep `index.html` short. Link out to the dedicated pages
-instead of duplicating full sections.
+## Add a publication
 
-**Research projects:** `research.html` is organised as Overview → Doctoral
-research (`#doctoral`, `#plc-rv`) → Selected research projects (`#rmlgym`) →
-Applied AI/ML (`#applied-ai`, `#cifake`) → Research software (`#sigma2rml`) →
-Related publications. Keep category labels distinct (doctoral / published
-research / academic ML project / research software). RMLGym and PLC cards may
-use explanatory SVG figures; do not add diagrams only for decoration.
+1. Open `publications.html`.
+2. Add a `<li class="pub" id="pub-…">` with year, title, authors, venue and
+   DOI/PDF links.
+3. Wrap Hisham's name in `<span class="me">…</span>`.
+4. Optionally add a short preview row on `index.html` (keep to the two most
+   relevant papers) and a related link from the matching project on
+   `research.html`.
 
-**Publications:** in `publications.html`, each paper is a `<li class="pub">`
-with a stable id (`pub-dsn`, `pub-rmlgym`). Wrap Hisham's name in
-`<span class="me">…</span>`.
+## Add a research project
 
-**Experience:** in `experience.html`, two tracks — Academic & Research
-(`#academic`, `#teaching`) and Industry & Software Engineering (`#industry`).
-Keep industrial PhD wording as association/collaboration (COBO Group /
-Technoleader), not company employment. Malta visit spans two periods
-(Dec 2025–Feb 2026; Apr–Jul 2026). Keep 30M+ and 5,000+/200+ metrics only in
-the relevant Experience bullets.
+1. Open `research.html` and place the project in the correct section:
+   doctoral (`#doctoral` / `#plc-rv`), published research (`#projects` /
+   `#rmlgym`), academic ML (`#applied-ai` / `#cifake`), or research software
+   (`#research-software` / `#sigma2rml`).
+2. Use `<article class="work-card">` with a category label, title, 2–4 sentence
+   description, optional `.work-card__tech` line, and publication/repository
+   links. Rely on typography and labels — do not add decorative project
+   diagrams.
+3. Keep Home previews short in `index.html` (details stay on Research).
 
-**Icons:** lightweight SVGs live in `assets/icons/` (Scholar, ORCID, GitHub,
-LinkedIn). Hero and footer use icon-only links with `aria-label` + `title`.
-About and Publications may use icon + text via `.profile-link`.
+## Update profile icons
 
-**Redirect stubs:** `engineering.html` → `experience.html#industry`,
-`teaching.html` → `experience.html#teaching`, `education.html` →
-`about.html#education`, `contact.html` → `about.html#contact`. Keep them
-`noindex` so they do not create duplicate search results.
+SVG files live in `assets/icons/`:
 
-**Sitemap:** update `sitemap.xml` when adding a new *canonical* content page.
-Do not list redirect-only URLs.
+- `google-scholar.svg`
+- `orcid.svg`
+- `github.svg`
+- `linkedin.svg`
 
-## Adding a new content page
+Hero and footer use icon-only `.profile-icon` links (`aria-label` + `title`).
+About and Publications may use `.profile-link` (icon + text). After replacing
+an SVG, hard-refresh to clear cache. Mask styles in `assets/css/styles.css`
+reference these files via `url("../icons/…")`.
 
-1. Create a real HTML file with unique title, description, canonical and OG tags.
-2. Copy the shared nav; set `aria-current="page"` on the new item.
-3. Use `.page-header` (light) for the page H1 — reserve `.hero` for the homepage.
-4. Add the URL to `sitemap.xml` and link it from the nav on every content page.
+## Update the CV
+
+Replace `cv.pdf` in the repository root. Nav and hero already link to
+`cv.pdf` (`target="_blank"`). No other path changes are required unless you
+rename the file.
+
+## Voice and positioning notes
+
+- Home / About / Research narratives: first person.
+- Experience bullets: active CV style (“Developed…”, “Designed…”).
+- About “Short bio”: third person only (for programmes/speakers).
+- Keep industrial PhD wording as association/collaboration (COBO Group /
+  Technoleader), not company employment.
+- Malta visit: Dec 2025–Feb 2026; Apr–Jul 2026.
+- Keep `30M+` and `5,000+/200+` only in Experience entries.
+
+## Redirect stubs
+
+| File | Destination |
+|------|-------------|
+| `engineering.html` | `experience.html#industry` |
+| `teaching.html` | `experience.html#teaching` |
+| `education.html` | `about.html#education` |
+| `contact.html` | `about.html#contact` |
+
+Keep `noindex, follow`. Do not list redirects in `sitemap.xml`.
 
 ## Deployment
 

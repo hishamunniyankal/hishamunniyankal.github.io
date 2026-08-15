@@ -1,8 +1,9 @@
 /* ==========================================================================
-   Hisham Unniyankal — profile site styles
-   Sections: reset · base type · skip link · nav · hero · sections ·
-   profile/capabilities · featured AI & research work · experience timeline · publications ·
-   education · contact · footer · reveal motion · responsive
+   Hisham Unniyankal — multi-page profile site
+   Sections: reset · base type · skip link · nav · hero · profile icons ·
+   capabilities · experience timeline · research/projects · publications ·
+   education · about · contact · page header · home themes/previews ·
+   footer · reveal motion · responsive
    ========================================================================== */
 
 /* ---- Reset ---- */
@@ -310,6 +311,17 @@ a:hover {
   border-color: rgba(255, 255, 255, 0.55);
 }
 
+.btn--secondary {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--border-strong);
+}
+.btn--secondary:hover {
+  background: var(--accent-faint);
+  border-color: var(--accent);
+  color: var(--accent-strong);
+}
+
 .hero__links {
   display: flex;
   flex-wrap: wrap;
@@ -427,17 +439,7 @@ a:hover {
   gap: 0.35rem 1.5rem;
 }
 
-/* ---- Profile / capabilities ---- */
-.profile__lead p + p { margin-top: 1rem; }
-.profile__lead { margin-bottom: 2.25rem; }
-
-.profile__open {
-  margin-top: 1rem;
-  padding-left: 1rem;
-  border-left: 3px solid var(--accent);
-  color: var(--text-muted);
-}
-
+/* ---- Capabilities ---- */
 .capabilities {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -584,31 +586,14 @@ a:hover {
 }
 
 /* ---- Featured AI & Research Work ----
-   Desktop: 3-column grid. RMLGym (--featured) spans the full width as the
-   lead project. The remaining three cards share one row. At <=900px the
-   grid stacks to a single column so intermediate widths never leave an
-   orphan card beside an empty column. */
+   Desktop: 3-column grid. Featured cards (--featured) span the full width as
+   lead items. Supporting cards share the remaining columns. At <=900px the
+   grid stacks to a single column. */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   align-items: stretch;
-}
-
-.work-more {
-  margin-top: 1.5rem;
-  font-size: 0.95rem;
-}
-
-.work-more a {
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--text-muted);
-}
-
-.work-more a:hover {
-  color: var(--accent);
-  text-decoration: underline;
 }
 
 .work-card {
@@ -660,14 +645,6 @@ a:hover {
   color: var(--text-muted);
   border: 1px solid var(--border);
 }
-
-.work-card__figure {
-  margin: 0;
-  background: var(--surface-alt);
-  border-bottom: 1px solid var(--border);
-}
-
-.work-card__figure img { display: block; width: 100%; }
 
 .work-card__body {
   display: flex;
@@ -721,17 +698,6 @@ a:hover {
 
 .work-stack .work-card--featured {
   grid-column: auto;
-}
-
-.related-links {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem 1.35rem;
-}
-
-.related-links a {
-  font-weight: 600;
 }
 
 @media (max-width: 900px) {
@@ -884,21 +850,6 @@ a:hover {
 
 .contact-card a { word-break: break-word; }
 
-.link-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-}
-
-.link-list a { font-weight: 600; }
-
-.link-list--inline {
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.55rem 1.35rem;
-}
-
 /* ---- About page ---- */
 .about-layout {
   display: grid;
@@ -970,54 +921,7 @@ a:hover {
   font-size: 1rem;
 }
 
-/* ---- Home: themes + compact previews ---- */
-.theme-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
-  list-style: none;
-}
-
-.theme {
-  padding: 0;
-}
-
-.theme a {
-  display: block;
-  height: 100%;
-  padding: 1.25rem 1.35rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  color: inherit;
-  transition: border-color var(--dur) var(--ease);
-}
-
-.theme a:hover,
-.theme a:focus-visible {
-  border-color: var(--accent);
-}
-
-.theme h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.45rem;
-  color: var(--text);
-}
-
-.theme p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 0.65rem;
-}
-
-.theme__more {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--accent);
-}
-
+/* ---- Home: compact previews ---- */
 .section__head {
   display: flex;
   flex-wrap: wrap;
@@ -1126,7 +1030,6 @@ a:hover {
 }
 
 @media (max-width: 900px) {
-  .theme-grid,
   .work-grid--previews {
     grid-template-columns: 1fr;
   }
@@ -1244,4 +1147,20 @@ a:hover {
   }
 
   .js .nav__cv { margin-top: 0.5rem; text-align: center; }
+}
+
+/* ---- 404 ---- */
+.not-found {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.not-found__code {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
 }

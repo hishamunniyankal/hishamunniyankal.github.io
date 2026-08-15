@@ -1,45 +1,50 @@
 # hishamunniyankal.github.io
 
-Personal profile site for **Hisham Unniyankal** — doctoral researcher in
-Computer Science at the University of Genoa. Work spans runtime verification
-and research software, academic applied machine learning, and production
-software/data engineering. Static HTML/CSS/JavaScript, deployed to
-**GitHub Pages** via GitHub Actions. No build step, no framework.
+Personal profile site for **Hisham Unniyankal** — doctoral researcher (PhD
+ongoing) in Computer Science at the University of Genoa. The site presents
+runtime verification and research software, academic applied machine learning,
+and production software/data engineering. Static HTML/CSS/JavaScript, deployed
+to **GitHub Pages** via GitHub Actions. No build step, no framework.
 
-## Structure
+## Information architecture
 
-Hybrid multi-page site (concise homepage + substantive section pages):
+Hybrid multi-page academic/research profile:
 
-- `index.html` — home / overview (hero, themes, research & publication previews,
-  experience summary, contact).
-- `research.html` — selected research & technical work: doctoral RV, published
-  projects, academic ML, and research software.
-- `publications.html` — peer-reviewed publications and scholarly profile links.
-- `experience.html` — academic/research and industry/software experience
-  (`#academic`, `#industry`, `#teaching`).
-- `about.html` — biography, education (`#education`), profiles and contact
-  (`#contact`).
-- `engineering.html`, `teaching.html`, `education.html`, `contact.html` —
-  redirect stubs to the matching page/anchor (`noindex`).
-- `404.html` — custom not-found page.
-- `assets/css/tokens.css` — design tokens (colours, type, spacing).
-- `assets/css/styles.css` — shared component styles.
-- `assets/js/main.js` — mobile menu, scroll reveal, footer year (progressive
-  enhancement; the site works without it).
-- `cv.pdf` — CV, linked from the nav and hero.
-- `robots.txt`, `sitemap.xml` — SEO (canonical pages only; redirects omitted).
-- `.github/workflows/deploy-pages.yml` — deployment workflow.
-- `.nojekyll` — tells Pages to serve files as-is (no Jekyll build).
-
-See **[EDITING.md](./EDITING.md)** for how to update content and deploy.
+| Page | Role |
+|------|------|
+| `index.html` | Home overview (hero, research & publication previews, experience summary, contact) |
+| `research.html` | Selected research & technical work |
+| `publications.html` | Peer-reviewed citations and scholarly profiles |
+| `experience.html` | Academic/research and industry experience |
+| `about.html` | Biography, education, short bio, profiles, contact |
 
 Primary navigation: **Home · Research · Publications · Experience · About · CV**
+
+Compatibility redirects (`noindex`):
+
+- `engineering.html` → `experience.html#industry`
+- `teaching.html` → `experience.html#teaching`
+- `education.html` → `about.html#education`
+- `contact.html` → `about.html#contact`
+
+## Repository layout
+
+- `assets/css/tokens.css` — design tokens (navy / off-white / teal, type, spacing)
+- `assets/css/styles.css` — shared component styles
+- `assets/js/main.js` — mobile menu, scroll reveal, footer year (progressive enhancement)
+- `assets/icons/` — Scholar, ORCID, GitHub, LinkedIn SVGs
+- `cv.pdf` — CV
+- `robots.txt`, `sitemap.xml` — SEO (canonical pages only)
+- `.github/workflows/deploy-pages.yml` — GitHub Pages deploy
+- `.nojekyll` — serve files as-is (no Jekyll)
+
+See **[EDITING.md](./EDITING.md)** for content updates.
 
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy-pages.yml`, which uploads
 the repository as a static artifact and deploys it to GitHub Pages.
 
-**One-time repository setting (must be done in the GitHub UI):**
+**One-time repository setting (GitHub UI):**
 `Settings → Pages → Build and deployment → Source → GitHub Actions`.
 Until that source is selected, the site returns "Site not found".
