@@ -78,8 +78,8 @@ rename the file.
 - Home / About / Research narratives: first person.
 - Experience bullets: active CV style (“Developed…”, “Designed…”).
 - About “Short bio”: third person only (for programmes/speakers).
-- Keep industrial PhD wording as association/collaboration (COBO Group /
-  Technoleader), not company employment.
+- Industrial PhD: co-funded by COBO Group, research-software collaboration with
+  Technoleader — not company employment.
 - Malta visit: Dec 2025–Feb 2026; Apr–Jul 2026.
 - Keep `30M+` and `5,000+/200+` only in Experience entries.
 
