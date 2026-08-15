@@ -2,8 +2,8 @@
    Hisham Unniyankal — multi-page profile site
    Sections: reset · base type · skip link · nav · hero · profile icons ·
    capabilities · experience timeline · research/projects · publications ·
-   education · about · contact · page header · home themes/previews ·
-   footer · reveal motion · responsive
+   education · about · contact · page header · home previews ·
+   footer · reveal motion · responsive · 404
    ========================================================================== */
 
 /* ---- Reset ---- */
@@ -231,15 +231,6 @@ a:hover {
   background: var(--navy);
   color: var(--text-on-dark);
   padding-block: clamp(3rem, 8vw, 5.5rem);
-}
-
-.hero__eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent-on-dark);
-  margin-bottom: 0.85rem;
 }
 
 .hero h1 {
@@ -726,11 +717,6 @@ a:hover {
 }
 
 /* ---- Publications ---- */
-.pub-note {
-  margin-bottom: 1.75rem;
-  color: var(--text-muted);
-}
-
 .pub-list {
   list-style: none;
   display: flex;
