@@ -31,9 +31,12 @@ Do not add Teaching, Education, Engineering or Contact as top-level nav items.
 **Home previews:** keep `index.html` short. Link out to the dedicated pages
 instead of duplicating full sections.
 
-**Research projects:** in `research.html`, each project is an
-`<article class="work-card">`. RMLGym uses `work-card--featured`. Stable ids
-(`rmlgym`, `cifake`, `plc-rv`, `sigma2rml`) support deep links from the home page.
+**Research projects:** `research.html` is organised as Overview → Doctoral
+research (`#doctoral`, `#plc-rv`) → Selected research projects (`#rmlgym`) →
+Applied AI/ML (`#applied-ai`, `#cifake`) → Research software (`#sigma2rml`) →
+Related publications. Keep category labels distinct (doctoral / published
+research / academic ML project / research software). RMLGym and PLC cards may
+use explanatory SVG figures; do not add diagrams only for decoration.
 
 **Publications:** in `publications.html`, each paper is a `<li class="pub">`
 with a stable id (`pub-dsn`, `pub-rmlgym`). Wrap Hisham's name in

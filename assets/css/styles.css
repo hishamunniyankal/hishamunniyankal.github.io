@@ -599,6 +599,34 @@ a:hover {
   font-size: 0.9rem;
 }
 
+.work-card__tech {
+  margin-top: 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.work-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.work-stack .work-card--featured {
+  grid-column: auto;
+}
+
+.related-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.35rem;
+}
+
+.related-links a {
+  font-weight: 600;
+}
+
 @media (max-width: 900px) {
   .work-grid {
     grid-template-columns: 1fr;

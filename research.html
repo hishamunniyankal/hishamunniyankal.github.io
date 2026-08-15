@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | Hisham Unniyankal</title>
-  <meta name="description" content="Doctoral research in runtime verification for industrial control systems, plus academic applied machine learning projects and research software." />
+  <meta name="description" content="Selected research and technical work: doctoral runtime verification for PLC systems, published reinforcement learning research, academic machine learning projects, and research software." />
   <link rel="canonical" href="https://hishamunniyankal.github.io/research.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Research | Hisham Unniyankal" />
-  <meta property="og:description" content="Runtime verification research, academic applied machine learning projects, and research software." />
+  <meta property="og:description" content="Doctoral runtime verification research, published RL work, academic machine learning projects, and research software." />
   <meta property="og:url" content="https://hishamunniyankal.github.io/research.html" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Research | Hisham Unniyankal" />
-  <meta name="twitter:description" content="Runtime verification research, academic applied machine learning projects, and research software." />
+  <meta name="twitter:description" content="Doctoral runtime verification research, published RL work, academic machine learning projects, and research software." />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,116 +47,178 @@
   <main id="main-content" tabindex="-1">
     <header class="page-header" id="top">
       <div class="wrap">
-        <h1>Research</h1>
-        <p class="page-header__intro">
-          My current doctoral research, selected academic applied machine
-          learning work, and research software. Publication details are on the
-          <a href="publications.html">Publications</a> page.
+        <h1>Selected Research &amp; Technical Work</h1>
+        <p class="page-header__intro" id="overview">
+          An overview of my doctoral research, selected published projects,
+          academic machine learning work, and research software. Peer-reviewed
+          citations live on the <a href="publications.html">Publications</a> page.
         </p>
       </div>
     </header>
 
     <section class="section" id="doctoral" aria-labelledby="doctoral-title">
       <div class="wrap">
-        <h2 class="section__title reveal" id="doctoral-title">Doctoral research</h2>
+        <h2 class="section__title reveal" id="doctoral-title">Current doctoral research</h2>
         <div class="prose reveal">
           <p>
-            My doctoral research develops runtime verification techniques for
-            programmable logic controller (PLC) program organisation units and
-            evaluates them in controller-oriented settings. The work centres on
-            specifications, research software, experimental evaluation of
-            monitor behaviour and overhead, and practical integration
-            constraints.
-          </p>
-          <p>
-            Results from this work appear in the Industry Track of IEEE/IFIP
-            DSN 2025. Related project notes are below; the full citation is on
-            the <a href="publications.html#pub-dsn">Publications</a> page.
+            My doctoral research focuses on runtime verification and runtime
+            monitoring for programmable logic controller (PLC) software. I design
+            and implement monitor-generation workflows that check program
+            organisation units against specifications during execution, then
+            evaluate monitor behaviour, overhead and integration constraints in
+            controller-oriented settings.
           </p>
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="applied-ai" aria-labelledby="applied-ai-title">
-      <div class="wrap">
-        <h2 class="section__title reveal" id="applied-ai-title">Selected projects</h2>
-        <p class="section__intro reveal">
-          Academic applied machine learning, research software, and doctoral
-          runtime verification work.
-        </p>
-
-        <div class="work-grid reveal">
-          <article class="work-card work-card--featured" id="rmlgym">
-            <div class="work-card__body">
-              <span class="work-card__kind">Academic AI · Reinforcement Learning · Published</span>
-              <h3 class="work-card__title">RMLGym</h3>
-              <p>
-                RMLGym integrates Runtime Monitoring Language specifications into
-                reinforcement learning environments, enabling explicit,
-                property-based reward shaping. The project combines
-                specifications, configurable monitoring and experimental RL
-                environments, and resulted in a peer-reviewed publication.
-              </p>
-              <div class="pub__links work-card__meta">
-                <a class="pub__badge" href="https://github.com/hishamunniyankal/rml-gym" target="_blank" rel="noopener">GitHub</a>
-                <a class="pub__badge" href="publications.html#pub-rmlgym">Publication</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-card work-card--emphasis" id="cifake">
-            <div class="work-card__body">
-              <span class="work-card__kind">Academic AI · Computer Vision</span>
-              <h3 class="work-card__title">Detecting AI-Generated vs Real Images</h3>
-              <p>
-                Compared multiple CNN architectures for classifying authentic and
-                AI-generated images on the 120,000-image CIFAKE dataset. The best
-                evaluated AlexNet configuration achieved 93.4% accuracy;
-                Grad-CAM was used to inspect model attention.
-              </p>
-              <div class="pub__links work-card__meta">
-                <a class="pub__badge" href="https://github.com/hishamunniyankal/Real-or-fake-Detecting-AI-Generated-vs.-Real-Images" target="_blank" rel="noopener">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-card" id="plc-rv">
+        <div class="work-stack reveal">
+          <article class="work-card work-card--featured" id="plc-rv">
+            <figure class="work-card__figure">
+              <img src="assets/images/projects/rv-pou-monitoring.svg" width="720" height="200" alt="Diagram showing PLC program organisation units checked by a runtime verification monitor that produces a pass or fail verdict." />
+            </figure>
             <div class="work-card__body">
               <span class="work-card__kind">Doctoral Research · Runtime Verification · Published</span>
               <h3 class="work-card__title">Runtime Verification for PLC Systems</h3>
               <p>
-                Doctoral research on runtime verification for PLC program
-                organisation units, including research software and experimental
-                evaluation in controller-oriented settings. Published in the
-                Industry Track of IEEE/IFIP DSN 2025.
+                Developed a runtime verification approach for PLC program
+                organisation units, including C-based specifications and a
+                monitor-generation workflow intended to integrate with existing
+                controller software paths.
               </p>
+              <p>
+                Implemented supporting research software such as Structured
+                Text-to-C program transformation, and ran experimental
+                evaluations of monitor behaviour, execution overhead and
+                practical integration constraints. Results appear in the Industry
+                Track of IEEE/IFIP DSN 2025.
+              </p>
+              <p class="work-card__tech">Runtime monitoring · PLC POUs · C specifications · experimental evaluation</p>
               <div class="pub__links work-card__meta">
                 <a class="pub__badge" href="publications.html#pub-dsn">Publication</a>
                 <a class="pub__badge" href="https://doi.org/10.1109/DSN-S65789.2025.00050" target="_blank" rel="noopener">DOI</a>
               </div>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="projects-title">Selected research projects</h2>
+        <p class="section__intro reveal">
+          Peer-reviewed research that connects runtime monitoring specifications
+          with reinforcement learning.
+        </p>
+
+        <div class="work-stack reveal">
+          <article class="work-card work-card--featured" id="rmlgym">
+            <figure class="work-card__figure">
+              <img src="assets/images/projects/rmlgym-flow.svg" width="720" height="200" alt="Diagram of RMLGym connecting a reward machine specification through an API to an RL policy and environment." />
+            </figure>
+            <div class="work-card__body">
+              <span class="work-card__kind">Published Research · Reinforcement Learning</span>
+              <h3 class="work-card__title">RMLGym</h3>
+              <p>
+                RMLGym integrates Runtime Monitoring Language (RML) specifications
+                into reinforcement learning environments so that reward signals
+                can be shaped from explicit, monitorable properties rather than
+                only hand-tuned scalar rewards.
+              </p>
+              <p>
+                The framework supports configurable monitoring and experimental
+                RL setups for specification-guided reward shaping, and led to a
+                peer-reviewed publication.
+              </p>
+              <p class="work-card__tech">RML · reward shaping · Gym-style environments · experimental RL</p>
+              <div class="pub__links work-card__meta">
+                <a class="pub__badge" href="https://github.com/hishamunniyankal/rml-gym" target="_blank" rel="noopener">GitHub</a>
+                <a class="pub__badge" href="publications.html#pub-rmlgym">Publication</a>
+                <a class="pub__badge" href="https://ceur-ws.org/Vol-3579/paper1.pdf" target="_blank" rel="noopener">PDF</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="applied-ai" aria-labelledby="applied-ai-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="applied-ai-title">Applied AI / machine learning work</h2>
+        <p class="section__intro reveal">
+          Academic machine learning projects. These are experimental coursework
+          or project results, not peer-reviewed publications.
+        </p>
+
+        <div class="work-stack reveal">
+          <article class="work-card" id="cifake">
+            <div class="work-card__body">
+              <span class="work-card__kind">Academic Machine-Learning Project</span>
+              <h3 class="work-card__title">AI-Generated vs Authentic Image Classification</h3>
+              <p>
+                Built and compared convolutional neural network classifiers for
+                distinguishing authentic images from AI-generated images on the
+                CIFAKE dataset (120,000 images).
+              </p>
+              <p>
+                Evaluated multiple architectures, including AlexNet, VGG19 and
+                InceptionResNetV2, under a shared experimental setup.
+              </p>
+              <p class="work-card__tech">CIFAKE · CNN comparison · AlexNet · VGG19 · InceptionResNetV2</p>
+              <div class="pub__links work-card__meta">
+                <a class="pub__badge" href="https://github.com/hishamunniyankal/Real-or-fake-Detecting-AI-Generated-vs.-Real-Images" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research-software" aria-labelledby="software-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="software-title">Research software</h2>
+        <p class="section__intro reveal">
+          Tooling that supports specification translation and monitoring workflows.
+        </p>
+
+        <div class="work-stack reveal">
           <article class="work-card" id="sigma2rml">
             <div class="work-card__body">
-              <span class="work-card__kind">Research Software · Security Specifications</span>
+              <span class="work-card__kind">Research Software</span>
               <h3 class="work-card__title">Sigma2RML</h3>
               <p>
-                Research software that translates Sigma security detection rules
-                into Runtime Monitoring Language specifications. Includes a
-                parser and modular translation engine with support for temporal
-                conditions, a FastAPI backend, a Next.js/TypeScript frontend, and
-                tests.
+                Converts Sigma security detection rules into Runtime Monitoring
+                Language specifications through a parser and modular translation
+                engine, including support for temporal conditions where
+                implemented.
               </p>
+              <p>
+                The system includes a Python/FastAPI backend, a Next.js/TypeScript
+                frontend, and tests.
+              </p>
+              <p class="work-card__tech">Sigma · RML · FastAPI · Next.js/TypeScript · tests</p>
               <div class="pub__links work-card__meta">
                 <a class="pub__badge" href="https://github.com/hishamunniyankal/sigma2rml" target="_blank" rel="noopener">GitHub</a>
               </div>
             </div>
           </article>
         </div>
-        <p class="work-more">
-          <a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">More projects on GitHub →</a>
+      </div>
+    </section>
+
+    <section class="section" id="related-publications" aria-labelledby="related-pubs-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="related-pubs-title">Related publications</h2>
+        <p class="section__intro reveal">
+          Project cards link to citations below. Full bibliographic entries and
+          scholarly profiles are on the Publications page.
         </p>
+        <ul class="related-links reveal">
+          <li><a href="publications.html#pub-dsn">DSN 2025 — PLC runtime verification</a></li>
+          <li><a href="publications.html#pub-rmlgym">CEUR 2023 — RMLGym</a></li>
+          <li><a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a></li>
+          <li><a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
       </div>
     </section>
   </main>

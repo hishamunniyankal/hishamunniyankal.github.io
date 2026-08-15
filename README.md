@@ -12,7 +12,8 @@ Hybrid multi-page site (concise homepage + substantive section pages):
 
 - `index.html` — home / overview (hero, themes, research & publication previews,
   experience summary, contact).
-- `research.html` — doctoral research and selected AI/ML & research-software work.
+- `research.html` — selected research & technical work: doctoral RV, published
+  projects, academic ML, and research software.
 - `publications.html` — peer-reviewed publications and scholarly profile links.
 - `experience.html` — academic/research and industry/software experience
   (`#academic`, `#industry`, `#teaching`).
