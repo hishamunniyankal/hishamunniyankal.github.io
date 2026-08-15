@@ -337,8 +337,8 @@ a:hover {
 
 .hero__links .profile-icon:hover,
 .hero__links .profile-icon:focus-visible {
-  color: var(--accent-on-dark);
-  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Compact scholarly / social icon links */
@@ -404,32 +404,47 @@ a:hover {
 }
 
 .profile-link:hover {
-  color: var(--accent);
+  color: var(--accent-strong);
   text-decoration: underline;
 }
 
+.profile-link:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
 .profile-link .profile-icon__glyph {
-  width: 1.15rem;
-  height: 1.15rem;
-  color: var(--accent);
+  width: 1.25rem;
+  height: 1.25rem;
   flex-shrink: 0;
 }
 
+/* Service-appropriate marks on light pages (not site teal). */
 .profile-link--scholar .profile-icon__glyph {
+  color: var(--brand-scholar);
   -webkit-mask-image: url("../icons/google-scholar.svg");
   mask-image: url("../icons/google-scholar.svg");
 }
 .profile-link--orcid .profile-icon__glyph {
+  color: var(--brand-orcid);
   -webkit-mask-image: url("../icons/orcid.svg");
   mask-image: url("../icons/orcid.svg");
 }
 .profile-link--github .profile-icon__glyph {
+  color: var(--brand-github);
   -webkit-mask-image: url("../icons/github.svg");
   mask-image: url("../icons/github.svg");
 }
 .profile-link--linkedin .profile-icon__glyph {
+  color: var(--brand-linkedin);
   -webkit-mask-image: url("../icons/linkedin.svg");
   mask-image: url("../icons/linkedin.svg");
+}
+
+.profile-link:hover .profile-icon__glyph,
+.profile-link:focus-visible .profile-icon__glyph {
+  opacity: 0.9;
 }
 
 .profile-links {
@@ -1078,7 +1093,7 @@ a:hover {
 
 .footer .profile-icon:hover,
 .footer .profile-icon:focus-visible {
-  color: var(--accent-on-dark);
+  color: #fff;
   border-color: rgba(255, 255, 255, 0.28);
   background: rgba(255, 255, 255, 0.06);
 }

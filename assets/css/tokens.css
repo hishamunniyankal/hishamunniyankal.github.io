@@ -24,6 +24,12 @@
   --accent-on-dark: #2dd4bf;/* accent on navy backgrounds */
   --accent-faint: #e6f2f0;  /* tint fills */
 
+  /* Profile brand marks (light backgrounds; dark surfaces use monochrome) */
+  --brand-scholar: #4285F4;
+  --brand-orcid: #A6CE39;
+  --brand-github: #181717;
+  --brand-linkedin: #0A66C2;
+
   /* Focus ring */
   --focus: #0e7490;
 
