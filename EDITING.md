@@ -49,9 +49,9 @@ Technoleader), not company employment. Malta visit spans two periods
 (Dec 2025–Feb 2026; Apr–Jul 2026). Keep 30M+ and 5,000+/200+ metrics only in
 the relevant Experience bullets.
 
-**About:** biography (first person), research/engineering perspective,
-education rows, optional third-person Short bio, professional links, contact.
-Headshot is optional — see the HTML TODO in `about.html`.
+**Icons:** lightweight SVGs live in `assets/icons/` (Scholar, ORCID, GitHub,
+LinkedIn). Hero and footer use icon-only links with `aria-label` + `title`.
+About and Publications may use icon + text via `.profile-link`.
 
 **Redirect stubs:** `engineering.html` → `experience.html#industry`,
 `teaching.html` → `experience.html#teaching`, `education.html` →
