@@ -42,13 +42,16 @@ use explanatory SVG figures; do not add diagrams only for decoration.
 with a stable id (`pub-dsn`, `pub-rmlgym`). Wrap Hisham's name in
 `<span class="me">…</span>`.
 
-**Experience:** in `experience.html`, roles are `<li class="entry">` items inside
-`.timeline` lists. Tracks use `#academic`, `#industry`; teaching uses
-`#teaching` on its entry.
+**Experience:** in `experience.html`, two tracks — Academic & Research
+(`#academic`, `#teaching`) and Industry & Software Engineering (`#industry`).
+Keep industrial PhD wording as association/collaboration (COBO Group /
+Technoleader), not company employment. Malta visit spans two periods
+(Dec 2025–Feb 2026; Apr–Jul 2026). Keep 30M+ and 5,000+/200+ metrics only in
+the relevant Experience bullets.
 
-**About:** biography (first person), three lean capability groups (Research,
-Applied AI, Engineering), then `#education` and `#contact`. Avoid keyword
-laundry lists and claims of broad formal-methods expertise.
+**About:** biography (first person), research/engineering perspective,
+education rows, optional third-person Short bio, professional links, contact.
+Headshot is optional — see the HTML TODO in `about.html`.
 
 **Redirect stubs:** `engineering.html` → `experience.html#industry`,
 `teaching.html` → `experience.html#teaching`, `education.html` →

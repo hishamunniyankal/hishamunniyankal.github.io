@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Hisham Unniyankal</title>
-  <meta name="description" content="Biography, education and contact for Hisham Unniyankal, doctoral researcher in Computer Science at the University of Genoa working on runtime verification, academic applied machine learning and research software." />
+  <meta name="description" content="Biography, education and contact for Hisham Unniyankal, doctoral researcher in Computer Science at the University of Genoa." />
   <link rel="canonical" href="https://hishamunniyankal.github.io/about.html" />
 
   <meta property="og:type" content="profile" />
@@ -49,35 +49,71 @@
       <div class="wrap">
         <h1>About</h1>
         <p class="page-header__intro">
-          Biography, education, professional profiles and contact information.
+          Biography, research perspective, education and contact information.
         </p>
       </div>
     </header>
 
     <section class="section" aria-labelledby="bio-title">
       <div class="wrap">
-        <h2 class="section__title reveal" id="bio-title">Biography</h2>
+        <!--
+          TODO: Insert a professional headshot when available.
+          Place a <figure class="about-photo"> as the first child of
+          .about-layout so the two-column layout activates automatically, e.g.:
+
+          <figure class="about-photo">
+            <img src="assets/images/portrait.jpg" width="320" height="400"
+                 alt="Portrait of Hisham Unniyankal" />
+          </figure>
+        -->
+        <div class="about-layout reveal">
+          <div class="about-copy">
+            <h2 class="section__title" id="bio-title">Biography</h2>
+            <div class="prose">
+              <p>
+                I am a doctoral researcher in Computer Science at the University
+                of Genoa (DIBRIS). My current research focuses on runtime
+                verification and runtime monitoring for dependable industrial
+                control software, particularly programmable logic controllers
+                (PLCs). I design and implement research software for monitor
+                generation and evaluation, and study monitor behaviour under
+                practical controller constraints.
+              </p>
+              <p>
+                My academic background also includes applied machine learning,
+                including reinforcement learning and experimental computer-vision
+                projects. That work sits alongside the doctoral research rather
+                than replacing it: it shows how I approach learning-based
+                experiments, evaluation and research software in academic
+                settings.
+              </p>
+              <p>
+                Before the PhD, I worked on production software and large-scale
+                security-data systems. That engineering experience continues to
+                shape a research engineering perspective&mdash;turning research
+                ideas into implementable, testable and maintainable systems.
+                Detailed projects are on the <a href="research.html">Research</a>
+                page; roles and dates are on
+                <a href="experience.html">Experience</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="perspective-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="perspective-title">Research and engineering perspective</h2>
         <div class="prose reveal">
           <p>
-            I am a doctoral researcher in Computer Science at the University of
-            Genoa. My current research focuses on runtime verification and
-            research software for dependable industrial control systems,
-            particularly programmable logic controllers (PLCs).
-          </p>
-          <p>
-            My background also includes academic applied machine learning,
-            including reinforcement learning and related experimental projects.
-            Before the PhD, I worked on production software and large-scale
-            security-data systems, which gives me a useful research engineering
-            perspective when turning research ideas into implementable systems.
-          </p>
-          <p>
-            Project details are on the <a href="research.html">Research</a>
-            page; roles and employment history are on
-            <a href="experience.html">Experience</a>.
+            My profile connects university research with industrial systems
+            experience. An industrial PhD association links runtime verification
+            research to dependable control software contexts, while earlier
+            software and data engineering roles keep the work grounded in systems
+            that must run under real operational constraints.
           </p>
         </div>
-
         <ul class="capabilities reveal" aria-label="Focus areas">
           <li class="capability">
             <h3>Research</h3>
@@ -111,7 +147,7 @@
     <section class="section" id="education" aria-labelledby="education-title">
       <div class="wrap">
         <h2 class="section__title reveal" id="education-title">Education</h2>
-        <ul class="edu-list reveal">
+        <ul class="edu-list edu-list--plain reveal">
           <li class="edu">
             <span class="edu__degree">PhD in Computer Science</span>
             <span class="edu__inst">University of Genoa, Genoa, Italy</span>
@@ -137,10 +173,46 @@
       </div>
     </section>
 
+    <section class="section" id="short-bio" aria-labelledby="short-bio-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="short-bio-title">Short bio</h2>
+        <p class="section__intro reveal">
+          Third-person text suitable for conference programmes, workshops and
+          speaker listings.
+        </p>
+        <div class="short-bio reveal">
+          <p>
+            Hisham Unniyankal is a doctoral researcher in Computer Science at the
+            University of Genoa (DIBRIS). His research focuses on runtime
+            verification and research software for dependable industrial control
+            systems, particularly programmable logic controllers. He also has
+            academic experience in applied machine learning, including
+            reinforcement learning. Before the PhD, he worked in software and
+            large-scale security-data engineering. His profile combines academic
+            research with a research engineering approach shaped by industrial
+            PhD association and prior production systems experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="profiles" aria-labelledby="profiles-title">
+      <div class="wrap">
+        <h2 class="section__title reveal" id="profiles-title">Professional links</h2>
+        <ul class="link-list link-list--inline reveal">
+          <li><a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a></li>
+          <li><a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="wrap">
-        <h2 class="section__title reveal" id="contact-title">Contact &amp; profiles</h2>
-        <p class="section__intro reveal">For collaboration or research enquiries, use the addresses below.</p>
+        <h2 class="section__title reveal" id="contact-title">Contact</h2>
+        <p class="section__intro reveal">For collaboration or research enquiries.</p>
         <div class="contact-grid reveal">
           <div class="contact-card">
             <h3>Email</h3>
@@ -155,16 +227,6 @@
               DIBRIS, University of Genoa<br />
               Genoa, Italy
             </address>
-          </div>
-          <div class="contact-card">
-            <h3>Profiles</h3>
-            <ul class="link-list">
-              <li><a href="https://scholar.google.com/citations?user=ikgQn0IAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
-              <li><a href="https://orcid.org/0009-0008-2407-5150" target="_blank" rel="noopener">ORCID</a></li>
-              <li><a href="https://github.com/hishamunniyankal" target="_blank" rel="noopener">GitHub</a></li>
-              <li><a href="https://www.linkedin.com/in/hishamu/" target="_blank" rel="noopener">LinkedIn</a></li>
-              <li><a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
-            </ul>
           </div>
         </div>
       </div>

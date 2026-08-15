@@ -764,7 +764,65 @@ a:hover {
 
 .link-list a { font-weight: 600; }
 
-/* ---- Internal page header (light; homepage keeps the dark hero) ---- */
+.link-list--inline {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.35rem;
+}
+
+/* ---- About page ---- */
+.about-layout {
+  display: grid;
+  gap: 1.75rem 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 800px) {
+  .about-layout:has(.about-photo) {
+    grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+  }
+}
+
+.about-photo {
+  margin: 0;
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+}
+
+.about-copy .section__title {
+  margin-bottom: 1rem;
+}
+
+.short-bio {
+  max-width: var(--measure);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.edu-list--plain .edu {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding-inline: 0;
+  padding-block: 0.95rem;
+}
+
+.edu-list--plain .edu:first-child {
+  padding-top: 0.25rem;
+}
+
+.edu-list--plain .edu:last-child {
+  border-bottom: 0;
+}
 .page-header {
   background: var(--surface-alt);
   border-bottom: 1px solid var(--border);
